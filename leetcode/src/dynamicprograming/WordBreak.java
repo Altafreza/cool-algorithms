@@ -96,7 +96,7 @@ public class WordBreak {
 		HashSet<String> set = new HashSet<>(dict);
 		// Wrapper required because if not it is always false which is an answer
 		// here 3 values are there null, false true;
-		Boolean[] dp = new Boolean[s.length()]; 
+		Boolean[] dp = new Boolean[s.length()];
 		return helper(0, set, s, dp) ? 1 : 0;
 	}
 

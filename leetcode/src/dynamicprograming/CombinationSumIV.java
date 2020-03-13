@@ -1,0 +1,79 @@
+package dynamicprograming;
+
+public class CombinationSumIV {
+	static public int combinationSum44(int[] nums, int target) {
+		int[] dp = new int[target + 1];
+		dp[0] = 1;
+
+		for (int i = 1; i <= target; i++) {
+			for (int coin : nums) {
+				if (i >= coin)
+					dp[i] = dp[i] + dp[i - coin]; // ways are added for for each sum "i"
+			}
+		}
+
+		return dp[target];
+	}
+
+	static public int combinationSum4(int[] nums, int target) {
+		Integer[][] dp = new Integer[nums.length][target + 1];
+		return helperq(nums, target, dp, 0);
+	}
+
+	public static int helperq(int[] coins, int amt, Integer[][] dp, int i) {
+		if (amt == 0)
+			return 1;
+		if (amt < 0 || i <= 0)
+			return 0;
+
+		if (dp[i][amt] != null)
+			return dp[i][amt];
+
+		int res = helperq(coins, amt, dp, i - 1) + helperq(coins, amt - coins[i - 1], dp, i);
+
+		dp[i][amt] = res;
+		return res;
+	}
+
+	/*
+	 * can be brought fro Combination sum we take i in each recursion to avoid
+	 * duplicate permutation of same combination
+	 */
+	static public int helper(int[] coins, int amt, Integer[][] dp, int i) {
+		if (amt == 0)
+			return 1;
+		if (amt < 0 || i >= coins.length)
+			return 0;
+
+		if (dp[i][amt] != null)
+			return dp[i][amt];
+		int res = 0;
+		for (int j = 0; j < coins.length; j++) {
+			res += helper(coins, amt - coins[j], dp, j);
+		}
+		dp[i][amt] = res;
+		return res;
+	}
+
+	public static int combinationSum(int[] coins, int amount) {
+		int[][] dp = new int[coins.length + 1][amount + 1];
+		for (int i = 0; i <= coins.length; i++) {
+			dp[i][0] = 1;
+		}
+
+		for (int i = 1; i <= coins.length; i++) {
+			for (int s = 1; s <= amount; s++) {
+				dp[i][s] = dp[i - 1][s];
+				if (s >= coins[i - 1])
+					dp[i][s] += dp[i][s - coins[i - 1]];
+			}
+		}
+
+		return dp[coins.length][amount];
+	}
+
+	public static void main(String[] args) {
+		System.out.println(combinationSum(new int[] { 1, 2, 3 }, 4));
+		System.out.println(Integer.compare(combinationSum44(new int[] { 1, 2, 3 }, 4), 7));
+	}
+}

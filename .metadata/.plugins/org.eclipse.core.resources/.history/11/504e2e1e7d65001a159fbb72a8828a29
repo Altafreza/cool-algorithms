@@ -1,0 +1,124 @@
+package dynamicprograming;
+
+import java.util.Arrays;
+
+public class CoinChange {
+	//
+	public int coinChange89(int[] coins, int amount) {
+		// dp [i] is optimal minimum coins to make "i" amount from coins set
+		// which depends on optimal coins "i - cj" amount
+		int max = amount + 1;
+		int[] dp = new int[amount + 1];
+		Arrays.fill(dp, max);
+		dp[0] = 0;
+		for (int i = 1; i <= amount; i++) { // for money from 1 to amount
+			for (int j = 0; j < coins.length; j++) { // using each coin
+				if (i >= coins[j])
+					dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
+			}
+		}
+		return dp[amount] == amount + 1 ? -1 : dp[amount];
+	}
+
+	public int coinChange234(int[] coins, int amount) {
+		int[] dp = new int[amount + 1];
+		Arrays.fill(dp, Integer.MAX_VALUE);
+		dp[0] = 0;
+		for (int i = 0; i < coins.length; i++) {
+			for (int s = 1; s <= amount; s++) {
+				if (s >= coins[i]) {
+					int preChoose = dp[s - coins[i]];
+					if (preChoose == Integer.MAX_VALUE)
+						continue;
+					dp[s] = Math.min(preChoose + 1, dp[s]);
+				}
+			}
+		}
+
+		if (dp[amount] == Integer.MAX_VALUE)
+			return -1;
+
+		return dp[amount];
+	}
+
+	// top down
+	public int coinChangeR(int[] coins, int amount) {
+		int[] dp = new int[amount + 1];
+		helper78(coins, amount, dp);
+		return dp[amount];
+	}
+
+	public int helper78(int[] coins, int amt, int[] dp) {
+		if (amt < 0)
+			return -1;
+		if (amt == 0)
+			return 0;
+
+		if (dp[amt] != 0)
+			return dp[amt];
+		int min = Integer.MAX_VALUE;
+		for (int j = 0; j < coins.length; j++) {
+			int res = helper78(coins, amt - coins[j], dp);
+			if (res >= 0 && min > res)
+				min = res + 1;
+		}
+
+		dp[amt] = (min == Integer.MAX_VALUE) ? -1 : min;
+		return dp[amt];
+	}
+
+	// top down
+	public int coinChange12(int[] coins, int amount) {
+		int[][] dp = new int[coins.length][amount + 1];
+		helper(coins, 0, amount, dp);
+		return dp[coins.length - 1][amount];
+	}
+
+	public int helper(int[] coins, int i, int amt, int[][] dp) {
+		if (amt < 0)
+			return -1;
+		if (amt == 0)
+			return 0;
+
+		if (dp[i][amt] != 0)
+			return dp[i][amt];
+		int min = Integer.MAX_VALUE;
+		for (int j = 0; j < coins.length; j++) {
+			int res = helper(coins, j, amt - coins[j], dp);
+			if (res >= 0 && min > res)
+				min = res + 1;
+			dp[j][amt] = (min == Integer.MAX_VALUE) ? -1 : min;
+		}
+
+		dp[i][amt] = (min == Integer.MAX_VALUE) ? -1 : min;
+		return min;
+	}
+
+	public static int coinChange(int[] coins, int amount) {
+		int[][] dp = new int[coins.length + 1][amount + 1];
+		int max = amount + 1;
+		for (int i = 0; i <= coins.length; i++) {
+			
+
+		}
+		for (int i = 0; i <= coins.length; i++) {
+			Arrays.fill(dp[i], max);
+			dp[i][0] = 0;
+		}
+
+		for (int i = 1; i <= coins.length; i++) {
+			for (int s = 1; s <= amount; s++) {
+				dp[i][s] = dp[i - 1][s];
+				if (s >= coins[i - 1])
+					dp[i][s] = Math.min(dp[i][s], 1 + dp[i][s - coins[i - 1]]);
+			}
+		}
+
+		return dp[coins.length][amount] == max ? -1 : dp[coins.length][amount];
+	}
+
+	public static void main(String[] args) {
+		System.out.println((coinChange(new int[] { 1,3 }, 23)));
+	}
+
+}

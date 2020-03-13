@@ -8,8 +8,8 @@ public class LongestIncreasingSubsequence {
 		int n = a.length;
 		// dp[prev = 0] represents when there is no prev element to this
 		// meaning the curr indx is the first selection
-		//return helper(a);
-		//return helper(a, -1, new int[n + 1]);
+		// return helper(a);
+		// return helper(a, -1, new int[n + 1]);
 		int[][] dp = new int[n + 1][n];
 		helper(a, -1, 0, dp);
 		return 0;
@@ -57,59 +57,60 @@ public class LongestIncreasingSubsequence {
 		dp[prev + 1][curr] = Math.max(exc, inc);
 		return dp[prev + 1][curr];
 	}
-	
+
 	public int helper(final int[] a) {
-        int[] dp = new int[a.length];
-        if(a.length == 0) return 0;
-        dp[0] = 1;
+		int[] dp = new int[a.length];
+		if (a.length == 0)
+			return 0;
+		dp[0] = 1;
 
-        for(int i = 0; i < a.length; i++){
-            dp[i] = 1;
-            for(int j = 0; j < i; j++){
-                if(a[i] > a[j]){
-                    dp[i] = Math.max(1 + dp[j], dp[i]);
-                } 
-            }
-        }
-        int max = Integer.MIN_VALUE;
-        for(int b : dp){
-            max = Math.max(max, b);
-        }
+		for (int i = 0; i < a.length; i++) {
+			dp[i] = 1;
+			for (int j = 0; j < i; j++) {
+				if (a[i] > a[j]) {
+					dp[i] = Math.max(1 + dp[j], dp[i]);
+				}
+			}
+		}
+		int max = Integer.MIN_VALUE;
+		for (int b : dp) {
+			max = Math.max(max, b);
+		}
 
-        return max;
-    }
-	
-	public static void main(String[] args) {
-		System.out.println(lengthOfLIS(new int[] {10,9,2,5,3,7,101,18}));
+		return max;
 	}
-	
+
+	public static void main(String[] args) {
+		System.out.println(lengthOfLIS(new int[] { 10, 9, 2, 5, 3, 7, 101, 18 }));
+	}
+
 	static List<Integer> findLIS(int[] arr) {
-        List<List<Integer>> cache = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            cache.add(new ArrayList<>());
-        }
+		List<List<Integer>> cache = new ArrayList<>();
+		for (int i = 0; i < arr.length; i++) {
+			cache.add(new ArrayList<>());
+		}
 
-        cache.get(0).add(arr[0]);
+		cache.get(0).add(arr[0]);
 
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = 0; j < i; j++) {
-                if (arr[i] > arr[j] && cache.get(i).size() < cache.get(j).size() + 1) {
-                    cache.set(i, new ArrayList<>(cache.get(j)));
-                }
-            }
-            cache.get(i).add(arr[i]);
-        }
+		for (int i = 1; i < arr.length; i++) {
+			for (int j = 0; j < i; j++) {
+				if (arr[i] > arr[j] && cache.get(i).size() < cache.get(j).size() + 1) {
+					cache.set(i, new ArrayList<>(cache.get(j)));
+				}
+			}
+			cache.get(i).add(arr[i]);
+		}
 
-        List<Integer> longest = cache.get(0);
-        for (int i = 0; i < cache.size(); i++) {
-            if (longest.size() < cache.get(i).size()) {
-                longest = new ArrayList<>(cache.get(i));
-            }
-        }
+		List<Integer> longest = cache.get(0);
+		for (int i = 0; i < cache.size(); i++) {
+			if (longest.size() < cache.get(i).size()) {
+				longest = new ArrayList<>(cache.get(i));
+			}
+		}
 
-        return longest;
-    }
-	
+		return longest;
+	}
+
 	/*
 	 * static int lisBottomUp(final int[] a) { int n = a.length; int[][] dp = new
 	 * int[n + 1][n];
