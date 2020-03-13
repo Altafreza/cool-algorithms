@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Rakuten\Documents\realworlddev\.metadata\.plugins\org.eclipse.jdt.core
+3001576667.index
+782190360.index
+4236552062.index

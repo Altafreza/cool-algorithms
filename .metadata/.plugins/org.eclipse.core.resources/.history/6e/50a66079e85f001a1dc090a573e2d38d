@@ -1,0 +1,30 @@
+package dynamicprograming;
+
+public class SubsetSum {
+	public static void main(String[] args) {
+		System.out.println(isSubsetSum(new int[] { 3, 2, 5, 7, 1 }, 6));
+	}
+	/*
+	 * f(nums, i, x) = for all j != i and j > i {f(nums, j, x - nums[i])}
+	 * 
+	 */		
+
+	private static boolean isSubsetSum(int[] nums, int x) {
+		// TODO Auto-generated method stub
+		return helper(nums, 0, x);
+	}
+
+	private static boolean helper(int[] nums, int i, int x) {
+		if (x == 0)
+			return true;
+		if (x < 0 || i == nums.length)
+			return false;
+
+		boolean res = false;
+
+		for (int j = i; j < nums.length; j++) {
+			res = res || helper(nums, j + 1, x - nums[j]);
+		}
+		return res;
+	}
+}

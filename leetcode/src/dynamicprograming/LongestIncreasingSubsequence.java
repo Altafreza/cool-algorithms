@@ -1,0 +1,122 @@
+package dynamicprograming;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class LongestIncreasingSubsequence {
+	static public int lengthOfLIS(int[] a) {
+		int n = a.length;
+		// dp[prev = 0] represents when there is no prev element to this
+		// meaning the curr indx is the first selection
+		//return helper(a);
+		//return helper(a, -1, new int[n + 1]);
+		int[][] dp = new int[n + 1][n];
+		helper(a, -1, 0, dp);
+		return 0;
+	}
+
+	private static int helper(int[] a, int prev, int[] memo) {
+		int prevEle = 0;
+		if (prev == -1)
+			prevEle = Integer.MIN_VALUE;
+		else {
+			prevEle = a[prev];
+		}
+		if (memo[prev + 1] != 0)
+			return memo[prev + 1];
+		int res = 0;
+		for (int j = prev + 1; j < a.length; j++) {
+			if (a[j] > prevEle) {
+				res = Math.max(res, 1 + helper(a, j, memo));
+			}
+		}
+
+		memo[prev + 1] = res;
+		return res;
+	}
+
+	// 2^n without memo because its like combination sum
+	// you either take it or you dont the curr idx
+	private static int helper(int[] a, int prev, int curr, int[][] dp) {
+		// dp[i][j] represents lis is starting from j(curr) idx
+		// with i as prev indx
+		// this i, j is necessary to memoize because we would later need for
+		// a different i, j(prev, curr) this i, j
+		if (curr == a.length)
+			return 0;
+
+		if (dp[prev + 1][curr] != 0)
+			return dp[prev + 1][curr];
+		int res = 0;
+
+		int exc = helper(a, prev, curr + 1, dp);
+		int inc = 0;
+		if (prev < 0 || a[prev] < a[curr])
+			inc = 1 + helper(a, curr, curr + 1, dp);
+
+		dp[prev + 1][curr] = Math.max(exc, inc);
+		return dp[prev + 1][curr];
+	}
+	
+	public int helper(final int[] a) {
+        int[] dp = new int[a.length];
+        if(a.length == 0) return 0;
+        dp[0] = 1;
+
+        for(int i = 0; i < a.length; i++){
+            dp[i] = 1;
+            for(int j = 0; j < i; j++){
+                if(a[i] > a[j]){
+                    dp[i] = Math.max(1 + dp[j], dp[i]);
+                } 
+            }
+        }
+        int max = Integer.MIN_VALUE;
+        for(int b : dp){
+            max = Math.max(max, b);
+        }
+
+        return max;
+    }
+	
+	public static void main(String[] args) {
+		System.out.println(lengthOfLIS(new int[] {10,9,2,5,3,7,101,18}));
+	}
+	
+	static List<Integer> findLIS(int[] arr) {
+        List<List<Integer>> cache = new ArrayList<>();
+        for (int i = 0; i < arr.length; i++) {
+            cache.add(new ArrayList<>());
+        }
+
+        cache.get(0).add(arr[0]);
+
+        for (int i = 1; i < arr.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (arr[i] > arr[j] && cache.get(i).size() < cache.get(j).size() + 1) {
+                    cache.set(i, new ArrayList<>(cache.get(j)));
+                }
+            }
+            cache.get(i).add(arr[i]);
+        }
+
+        List<Integer> longest = cache.get(0);
+        for (int i = 0; i < cache.size(); i++) {
+            if (longest.size() < cache.get(i).size()) {
+                longest = new ArrayList<>(cache.get(i));
+            }
+        }
+
+        return longest;
+    }
+	
+	/*
+	 * static int lisBottomUp(final int[] a) { int n = a.length; int[][] dp = new
+	 * int[n + 1][n];
+	 * 
+	 * for() return 0;
+	 * 
+	 * }
+	 */
+
+}
