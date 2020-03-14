@@ -51,12 +51,6 @@ public class CoinChange2 {
 		return res;
 	}
 
-	
-	
-	
-	
-	
-	// COIN - AMOUNT 2D TOP DOWN BOTTOM UP
 	// can be brought fro Combination sum
 	// we take i in each recursion to avoid duplicate permutation of same
 	// combination
