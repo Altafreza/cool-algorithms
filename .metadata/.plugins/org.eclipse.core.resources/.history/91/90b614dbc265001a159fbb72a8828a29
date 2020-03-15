@@ -47,11 +47,15 @@ public class CoinChange2 {
 
 	public static int change(int amount, int[] coins) {
 		Integer[][] dp = new Integer[coins.length + 1][amount + 1];
-		// int res = helper(coins, amount, dp, coins.length);
-		int res = helper3(coins, amount, dp, 0);
+		int res = helper(coins, amount, dp, coins.length);
 		return res;
 	}
 
+	
+	
+	
+	
+	
 	// COIN - AMOUNT 2D TOP DOWN BOTTOM UP
 	// can be brought fro Combination sum
 	// we take i in each recursion to avoid duplicate permutation of same
@@ -68,23 +72,6 @@ public class CoinChange2 {
 
 		// self work is simply adding
 		int res = helper(coins, amt, dp, i - 1) + helper(coins, amt - coins[i - 1], dp, i);
-
-		dp[i][amt] = res;
-		return res;
-	}
-
-	public static int helper3(int[] coins, int amt, Integer[][] dp, int i) {
-		if (amt == 0)
-			return 1; // when amt - coins[i] leads to this means we got a way
-		if (amt < 0 || i >= coins.length)
-			return 0; // i - 1 leads to this means no way
-
-		if (dp[i][amt] != null)
-			return dp[i][amt];
-
-		// self work is simply adding
-		int res = helper(coins, amt, dp, i + 1) + helper(coins, amt - coins[i], dp, i);
-		// simply like combination sum we can use the same coin more than once (2nd helper , i)
 
 		dp[i][amt] = res;
 		return res;
@@ -121,7 +108,7 @@ public class CoinChange2 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println((change32(5, new int[] { 1, 2, 3 })));
+		System.out.println((change(5, new int[] { 1, 2, 3 })));
 	}
 
 }
