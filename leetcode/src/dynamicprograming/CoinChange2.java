@@ -119,7 +119,22 @@ public class CoinChange2 {
 
 		return dp[coins.length][amount];
 	}
-
+	
+	// this wont work here because of double counting 
+	// this works in case of combination sum
+	public static int change89(int amount, int[] coins) {
+		// dp [i] is optimal minimum coins to make "i" amount from coins set
+		// which depends on optimal coins "i - cj" amount
+		int[] dp = new int[amount + 1];
+		dp[0] = 1;
+		for (int i = 1; i <= amount; i++) { // for money from 1 to amount
+			for (int j = 0; j < coins.length; j++) { // using each coin
+				if (i >= coins[j])
+					dp[i] = dp[i] + dp[i - coins[j]];
+			}
+		}
+		return dp[amount] == amount + 1 ? -1 : dp[amount];
+	}
 	public static void main(String[] args) {
 		System.out.println((change32(5, new int[] { 1, 2, 3 })));
 	}
