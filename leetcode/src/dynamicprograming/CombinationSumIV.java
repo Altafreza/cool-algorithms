@@ -1,10 +1,18 @@
 package dynamicprograming;
 
 public class CombinationSumIV {
+    /* Example for amount = 5 and 1, 2, 3
+     * 1
+     * 11 | 2
+     * 111, 21 | 12
+     * 1111, 211, 121 | 112, 22 | 13
+     * 11111, 2111, 1211, 1121, 221, 131 | 1112, 212, 122 | 113, 23
+     * */
     static public int combinationSum44(int[] nums, int target) {
         int[] dp = new int[target + 1];
         dp[0] = 1;
 
+        // Double counting
         for (int i = 1; i <= target; i++) {
             for (int coin : nums) {
                 if (i >= coin)
@@ -22,7 +30,7 @@ public class CombinationSumIV {
 
 
     /*
-     * can be brought fro Combination sum we take i in each recursion to avoid
+     * can be brought from Combination sum we take 0 in each recursion to NOT avoid
      * duplicate permutation of same combination
      */
     static public int helper(int[] coins, int amt, Integer[][] dp, int i) {
