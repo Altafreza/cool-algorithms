@@ -23,8 +23,10 @@ public class CoinChange2 {
         if (dp[i][amt] != null)
             return dp[i][amt];
         int res = 0;
-        //since we starting with ith ele which prevents double counting unlike combination sum 4
+        //since we starting with ith ele
         for (int j = i; j < coins.length; j++) {
+            // which prevents double counting unlike combination sum 4
+            // since we are sending j everytime
             res += helper2(coins, j, amt - coins[j], dp);
         }
         dp[i][amt] = res;
@@ -92,7 +94,7 @@ public class CoinChange2 {
         for (int i = 1; i <= coins.length; i++) {
             for (int s = 1; s <= amount; s++) {
                 // previous no. of ways for the same amount but leaving the current coin
-                // because that is also the no. of ways we can get the same amount
+                // because that is also the no. of ways we can get the same amount(OR LOGIC)
                 dp[i][s] = dp[i - 1][s];
                 if (s >= coins[i - 1])
                     // and with those ways we add ways to make (curr amount - the coin we are
@@ -140,7 +142,7 @@ public class CoinChange2 {
     }
 
     public static void main(String[] args) {
-        System.out.println((change2(5, new int[]{1, 2, 3})));
+        System.out.println((change(3, new int[]{1, 2, 3})));
     }
 
 

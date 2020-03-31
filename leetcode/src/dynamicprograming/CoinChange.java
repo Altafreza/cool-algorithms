@@ -11,6 +11,8 @@ public class CoinChange {
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, max);
         dp[0] = 0;
+        // No double counting here because it excludes shit in minimum
+        // minimum of double counting will also give minimum
         for (int i = 1; i <= amount; i++) { // for money from 1 to amount
             for (int j = 0; j < coins.length; j++) { // using each coin
                 if (i >= coins[j])
@@ -20,28 +22,9 @@ public class CoinChange {
         return dp[amount] == amount + 1 ? -1 : dp[amount];
     }
 
-    public static int coinChange234(int[] coins, int amount) {
-        int[] dp = new int[amount + 1];
-        Arrays.fill(dp, Integer.MAX_VALUE);
-        dp[0] = 0;
-        for (int i = 0; i < coins.length; i++) {
-            for (int s = 1; s <= amount; s++) {
-                if (s >= coins[i]) {
-                    int preChoose = dp[s - coins[i]];
-                    if (preChoose == Integer.MAX_VALUE)
-                        continue;
-                    dp[s] = Math.min(preChoose + 1, dp[s]);
-                }
-            }
-        }
-
-        if (dp[amount] == Integer.MAX_VALUE)
-            return -1;
-
-        return dp[amount];
-    }
-
     // top down
+    // truly the topdown of abov
+    // meh, not truly coz truly will be starting from last index
     public static int coinChangeR(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
         helper78(coins, amount, dp);
@@ -66,6 +49,7 @@ public class CoinChange {
         dp[amt] = (min == Integer.MAX_VALUE) ? -1 : min;
         return dp[amt];
     }
+
 
     // top down
     public static int coinChange12(int[] coins, int amount) {
@@ -93,6 +77,30 @@ public class CoinChange {
         dp[i][amt] = (min == Integer.MAX_VALUE) ? -1 : min;
         return min;
     }
+
+    public static int coinChange234(int[] coins, int amount) {
+        int[] dp = new int[amount + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
+        for (int i = 0; i < coins.length; i++) {
+            for (int s = 1; s <= amount; s++) {
+                if (s >= coins[i]) {
+                    int preChoose = dp[s - coins[i]];
+                    if (preChoose == Integer.MAX_VALUE)
+                        continue;
+                    dp[s] = Math.min(preChoose + 1, dp[s]);
+                }
+            }
+        }
+
+        if (dp[amount] == Integer.MAX_VALUE)
+            return -1;
+
+        return dp[amount];
+    }
+
+
+
 
     public static int coinChange(int[] coins, int amount) {
         int[][] dp = new int[coins.length + 1][amount + 1];
