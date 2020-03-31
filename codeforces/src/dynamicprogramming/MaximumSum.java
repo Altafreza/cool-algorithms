@@ -2,7 +2,7 @@ package dynamicprogramming;
 
 import java.util.Scanner;
 
-public class B_855{
+public class MaximumSum{
     public static void main(String[] a) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

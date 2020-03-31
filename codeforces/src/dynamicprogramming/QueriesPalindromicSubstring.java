@@ -3,7 +3,7 @@ package dynamicprogramming;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class H_245 {
+public class QueriesPalindromicSubstring {
     public static void main(String[] args) throws IOException {
         input.init(System.in);
         PrintWriter out = new PrintWriter((System.out));
