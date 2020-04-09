@@ -21,7 +21,7 @@ public class CombinationSum {
 			return;
 		}
 		
-		// i == index because same idx can be used multiple times
+		// i == index because it wont double count ie 112 == 211
 		for (int i = index; i < nums.length && nums[i] <= target; i++) {
 			temp.add(nums[i]);
 			combinationSum(nums, i, res, temp, target - nums[i]);

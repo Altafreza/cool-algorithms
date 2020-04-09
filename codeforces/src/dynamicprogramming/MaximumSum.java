@@ -2,6 +2,9 @@ package dynamicprogramming;
 
 import java.util.Scanner;
 
+/**
+ * CF - 855/b
+ */
 public class MaximumSum{
     public static void main(String[] a) {
         Scanner sc = new Scanner(System.in);

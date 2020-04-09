@@ -20,12 +20,12 @@ public class Subsets {
     }
 
     public static void main(String[] args) {
-        System.out.println(subsets(new int[]{1, 2, 3}));
+        System.out.println(subsets1(new int[]{1, 2, 3}));
     }
 
-    public List<List<Integer>> subsets1(int[] nums) {
+    public static List<List<Integer>> subsets1(int[] nums) {
         List<List<Integer>> res = new ArrayList<List<Integer>>();
-        subsets(nums, res, new ArrayList<Integer>(), 0);
+        subsets213(nums, res, new ArrayList<Integer>(), 0);
         return res;
     }
 
@@ -44,12 +44,12 @@ public class Subsets {
 
     }
 
-    private void subsets213(int[] nums, List<List<Integer>> res, List<Integer> subset, int start) {
+    private static void subsets213(int[] nums, List<List<Integer>> res, List<Integer> subset, int start) {
         res.add(new ArrayList<>(subset));
 
         for (int i = start; i < nums.length; i++) {
             subset.add(nums[i]);
-            subsets(nums, res, subset, i + 1);
+            subsets213(nums, res, subset, i + 1);
             subset.remove(subset.size() - 1);
         }
     }
