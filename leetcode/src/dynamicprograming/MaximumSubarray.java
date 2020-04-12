@@ -2,7 +2,7 @@ package dynamicprograming;
 
 public class MaximumSubarray {
     // Recursive
-    int maxSum = Integer.MIN_VALUE;
+    private static int maxSum = Integer.MIN_VALUE;
 
     // O(n2)
     public int maxSubArray2(int[] nums) {
@@ -29,15 +29,15 @@ public class MaximumSubarray {
         return maxSum;
     }
 
-    public int maxSubArray4(int[] nums) {
+    public static int maxSubArray4(int[] nums) {
         dfs1(nums, nums.length - 1);
         return maxSum;
     }
 
-    private int dfs1(int[] nums, int index) {
+    private static int dfs1(int[] nums, int index) {
         if (index < 0)
             return 0;
-        int maxSumFromIndex = Math.max(nums[index], nums[index] + dfs(nums, index - 1));
+        int maxSumFromIndex = Math.max(nums[index], nums[index] + dfs1(nums, index - 1));
         maxSum = Math.max(maxSumFromIndex, maxSum);
         return maxSumFromIndex;
     }
@@ -48,7 +48,7 @@ public class MaximumSubarray {
         return maxSum;
     }
 
-    private int dfs(int[] nums, int index) {
+    private static int dfs(int[] nums, int index) {
         if (index >= nums.length)
             return 0;
         int sum = nums[index];
@@ -56,5 +56,9 @@ public class MaximumSubarray {
         int maxSumFromIndex = Math.max(sum, incsum);
         maxSum = Math.max(maxSumFromIndex, maxSum);
         return maxSumFromIndex;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(maxSubArray4(new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4}));
     }
 }

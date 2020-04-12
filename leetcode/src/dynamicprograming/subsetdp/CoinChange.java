@@ -11,7 +11,7 @@ public class CoinChange {
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, max);
         dp[0] = 0;
-        // No double counting here because it excludes shit in minimum
+        // double counting is there here because it excludes shit in minimum
         // minimum of double counting will also give minimum
         for (int i = 1; i <= amount; i++) { // for money from 1 to amount
             for (int j = 0; j < coins.length; j++) { // using each coin
@@ -25,19 +25,18 @@ public class CoinChange {
     // top down
     // truly the topdown of abov
     // meh, not truly coz truly will be starting from last index
-    public static int coinChangeR(int[] coins, int amount) {
-        int[] dp = new int[amount + 1];
-        helper78(coins, amount, dp);
-        return dp[amount];
+    public static int coinChange12s(int[] coins, int amount) {
+        Integer[] dp = new Integer[amount + 1];
+        return helper78(coins, amount, dp);
     }
 
-    public static int helper78(int[] coins, int amt, int[] dp) {
+    public static int helper78(int[] coins, int amt, Integer[] dp) {
         if (amt < 0)
             return -1;
         if (amt == 0)
             return 0;
 
-        if (dp[amt] != 0)
+        if (dp[amt] != null)
             return dp[amt];
         int min = Integer.MAX_VALUE;
         for (int j = 0; j < coins.length; j++) {
@@ -100,8 +99,6 @@ public class CoinChange {
     }
 
 
-
-
     public static int coinChange(int[] coins, int amount) {
         int[][] dp = new int[coins.length + 1][amount + 1];
         int max = amount + 1;
@@ -140,8 +137,25 @@ public class CoinChange {
         return dp[amount];
     }
 
+    public static int coinChange123(int[] coins, int amount) {
+        // dp [i] is optimal minimum coins to make "i" amount from coins set
+        // which depends on optimal coins "i - cj" amount
+        int max = amount + 1;
+
+        int[][] dp = new int[amount + 1][coins.length + 1];
+        for (int i = 1; i <= amount; i++) { // for money from 1 to amount
+            Arrays.fill(dp[i], max);
+            for (int j = 1; j <= coins.length; j++) { // using each coin
+                dp[i][j] = dp[i][j - 1];
+                if (i >= coins[j - 1])
+                    dp[i][j] = Math.min(dp[i][j], dp[i - coins[j - 1]][j] + 1);
+            }
+        }
+        return dp[amount][coins.length] == amount + 1 ? -1 : dp[amount][coins.length];
+    }
+
     public static void main(String[] args) {
-        System.out.println((coinChangeR(new int[]{1, 2, 5}, 11)));
+        System.out.println((coinChange(new int[]{1, 2, 5}, 11)));
     }
 
 }
