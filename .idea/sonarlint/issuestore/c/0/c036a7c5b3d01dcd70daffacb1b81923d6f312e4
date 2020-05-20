@@ -1,10 +1,10 @@
 
-N	java:S106G"9Replace this use of System.out or System.err by a logger.(ë¹û£
-`
-java:S11246"EReorder the modifiers to comply with the Java Language Specification.(öÛè³ùÿÿÿÿ
+[
+java:S1124,"EReorder the modifiers to comply with the Java Language Specification.(ù·Ã
 S	java:S106H"9Replace this use of System.out or System.err by a logger.(üí«¢ùÿÿÿÿ
 `
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÈÑÁìÿÿÿÿÿ
-[
-java:S1124,"EReorder the modifiers to comply with the Java Language Specification.(ù·Ã
+N	java:S106G"9Replace this use of System.out or System.err by a logger.(ë¹û£
 k	java:S117M"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±çƒüÿÿÿÿ
+`
+java:S11246"EReorder the modifiers to comply with the Java Language Specification.(öÛè³ùÿÿÿÿ
