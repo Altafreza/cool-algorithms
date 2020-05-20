@@ -28,8 +28,8 @@ class Knapsack {
             ws[i] = sc.nextInt();
             vs[i] = sc.nextInt();
         }
-        //System.out.println(maxKnapsack(ws, vs, 0, w, dp));
-        System.out.println(maxKnapsack1(ws, vs, w));
+        System.out.println(maxKnapsack(ws, vs, 0, w, dp));
+        //System.out.println(maxKnapsack1(ws, vs, w));
     }
 
     private static long maxKnapsack(int[] ws, long[] vs, int w) {
@@ -43,6 +43,7 @@ class Knapsack {
         return dp[w];
     }
 
+    // non repeating non double counting
     private static long maxKnapsack1(int[] ws, long[] vs, int w) {
         long[][] dp = new long[ws.length+1][w + 1];
 

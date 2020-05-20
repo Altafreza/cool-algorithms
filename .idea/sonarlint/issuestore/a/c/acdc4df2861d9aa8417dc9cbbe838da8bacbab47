@@ -1,0 +1,13 @@
+
+o
+java:S3776#"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(…ห”8หþนั•.
+h	java:S116"LRename this field "X" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ยลอ8หþนั•.
+Y
+java:S18549"<Remove this useless assignment to local variable "endIndex".(้ทฦ์8หþนั•.
+R
+java:S1117)"5Rename "dp" which hides the field declared at line 6.(ๅภ8หþนั•.
+O
+java:S1481*"-Remove this unused "endIndex" local variable.(หณภ๋๙ÿÿÿÿ8หþนั•.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(þมธþÿÿÿÿ8หþนั•.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(þมธþÿÿÿÿ8หþนั•.
+h	java:S116"LRename this field "Y" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ใซด๖8หþนั•.

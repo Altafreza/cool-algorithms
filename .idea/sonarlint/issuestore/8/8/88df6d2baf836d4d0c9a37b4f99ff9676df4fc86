@@ -1,0 +1,19 @@
+
+Š
+java:S1319"oThe type of the "dict" object should be an interface such as "List" rather than the implementation "ArrayList".(¡çßœúÿÿÿÿ
+‡
+java:S1319"lThe type of the "dict" object should be an interface such as "Set" rather than the implementation "HashSet".(¢É»ªıÿÿÿÿ
+…
+java:S1319f"jThe type of the "dp" object should be an interface such as "Map" rather than the implementation "HashMap".(ÉÁëòúÿÿÿÿ
+Q
+java:S1854Q"6Remove this useless assignment to local variable "dp".(¹ã¸üûÿÿÿÿ
+t
+java:S2293Q"YReplace the type specification in this constructor call with the diamond operator ("<>").(¹ã¸üûÿÿÿÿ
+N	java:S106~"9Replace this use of System.out or System.err by a logger.(ğş©
+O	java:S106€"9Replace this use of System.out or System.err by a logger.(–Üë¯
+O	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(Õâ¢¢
+T	java:S106†"9Replace this use of System.out or System.err by a logger.(Ïä‚õøÿÿÿÿ
+B
+java:S1481Q"'Remove this unused "dp" local variable.(¹ã¸üûÿÿÿÿ
+Q	java:S125	"<This block of commented-out lines of code should be removed.(±œĞ’
+P	java:S125R"<This block of commented-out lines of code should be removed.(œßÕ_

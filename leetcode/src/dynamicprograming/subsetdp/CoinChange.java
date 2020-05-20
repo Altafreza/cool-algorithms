@@ -11,7 +11,7 @@ public class CoinChange {
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, max);
         dp[0] = 0;
-        // double counting is there here because it excludes shit in minimum
+        // double counting is there here because the question says so
         // minimum of double counting will also give minimum
         for (int i = 1; i <= amount; i++) { // for money from 1 to amount
             for (int j = 0; j < coins.length; j++) { // using each coin
@@ -53,8 +53,7 @@ public class CoinChange {
     // top down
     public static int coinChange12(int[] coins, int amount) {
         int[][] dp = new int[coins.length][amount + 1];
-        helper(coins, 0, amount, dp);
-        return dp[coins.length - 1][amount];
+        return helper(coins, 0, amount, dp);
     }
 
     public static int helper(int[] coins, int i, int amt, int[][] dp) {
@@ -74,7 +73,7 @@ public class CoinChange {
         }
 
         dp[i][amt] = (min == Integer.MAX_VALUE) ? -1 : min;
-        return min;
+        return dp[i][amt];
     }
 
     public static int coinChange234(int[] coins, int amount) {
@@ -155,7 +154,7 @@ public class CoinChange {
     }
 
     public static void main(String[] args) {
-        System.out.println((coinChange(new int[]{1, 2, 5}, 11)));
+        System.out.println((coinChange12(new int[]{1, 2, 3}, 5)));
     }
 
 }

@@ -1,6 +1,39 @@
 package dynamicprograming.stringdp;
 
 public class LongestPalindromicSubstring {
+    public static String longestPalindrome(String s) {
+        int n = s.length();
+        if (n == 0)
+            return "";
+        boolean[][] dp = new boolean[n][n];
+        int res_i = 0, res_j = 0;
+        for (int j = 0; j < n; j++) {
+            for (int i = 0; i <= j; i++) {
+                if (j - 3 < i) {
+                    if (s.charAt(i) == s.charAt(j)) {
+                        dp[i][j] = true;
+                    }
+                } else {
+                    if (dp[i + 1][j - 1] == true && s.charAt(i) == s.charAt(j)) {
+                        dp[i][j] = true;
+                    }
+                }
+                if (dp[i][j]) {
+                    if (res_j - res_i + 1 < j - i + 1) {
+                        res_j = j;
+                        res_i = i;
+                    }
+                }
+            }
+        }
+
+        return s.substring(res_i, res_j + 1);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(longestPalindrome("babad"));
+    }
+
     public String longestPalindrome1(String s) {
         int n = s.length();
         if (n < 1)
@@ -29,26 +62,5 @@ public class LongestPalindromicSubstring {
         }
 
         return str;
-    }
-
-    public String longestPalindrome(String s) {
-        int n = s.length();
-        if (n == 0)
-            return "";
-        boolean[][] dp = new boolean[n][n];
-        int res_i = 0, res_j = 0;
-        for (int j = 0; j < n; j++) {
-            for (int i = 0; i <= j; i++) {
-                dp[i][j] = (j - i) < 3 ? s.charAt(i) == s.charAt(j) : dp[i + 1][j - 1] && s.charAt(i) == s.charAt(j);
-                if (dp[i][j]) {
-                    if (res_j - res_i + 1 < j - i + 1) {
-                        res_j = j;
-                        res_i = i;
-                    }
-                }
-            }
-        }
-
-        return s.substring(res_i, res_j + 1);
     }
 }

@@ -35,8 +35,8 @@ public class ReversePair {
             if ((long) A.get(i) > (long) 2 * A.get(j)) {
                 count += mid - i + 1;
                 j++;
-            } else {
                 i++;
+            } else {
             }
         }
         Collections.sort(A.subList(lo, hi + 1));

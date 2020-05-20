@@ -1,0 +1,4 @@
+
+m	java:S127"XRefactor the code in order to not assign to this loop counter from within the loop body.(¹Ï¹
+U
+java:S1118	":Add a private constructor to hide the implicit public one.(…ïÎ¼üÿÿÿÿ

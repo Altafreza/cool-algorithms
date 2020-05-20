@@ -1,0 +1,8 @@
+
+V
+java:S1117	"9Rename "maxSum" which hides the field declared at line 5.(É„Ú“8‘ò€¬–.
+>
+java:S1659"!Declare "sum" on a separate line.(å­„8‘ò€¬–.
+V
+java:S1117"9Rename "maxSum" which hides the field declared at line 5.(å­„8‘ò€¬–.
+Z	java:S106>"9Replace this use of System.out or System.err by a logger.(ª“ÜÙÿÿÿÿÿ8‘ò€¬–.

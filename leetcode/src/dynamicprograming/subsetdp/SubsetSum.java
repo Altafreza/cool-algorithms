@@ -4,15 +4,23 @@ public class SubsetSum {
     public static void main(String[] args) {
         System.out.println(canPartition(new int[]{3, 2, 7}, 6));
     }
+
     /*
      * f(nums, i, x) = for all j != i and j > i {f(nums, j, x - nums[i])}
-     * de
+     *
      */
+    static boolean equalsum(int a[], int n, int sum, int i) {
+        if (0 == sum)
+            return true;
+        if (i >= n || sum < 0)
+            return false;
+        return equalsum(a, n, sum - a[i], i + 1) || equalsum(a, n, sum, i + 1);
+    }
 
     private static boolean isSubsetSum(int[] nums, int x) {
         Boolean[][] dp = new Boolean[nums.length][x + 1];
 
-        //return helper(nums, 0, x, dp);
+        //return helper(nums, 0, x  , dp);
         boolean b = helper1(nums, nums.length - 1, x, dp);
         return b;
     }

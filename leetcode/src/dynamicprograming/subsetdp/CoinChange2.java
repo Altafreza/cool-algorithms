@@ -26,7 +26,7 @@ public class CoinChange2 {
         //since we starting with ith ele
         for (int j = i; j < coins.length; j++) {
             // which prevents double counting unlike combination sum 4
-            // since we are sending j everytime
+            // since we are sending j everytime but there is repitition
             res += helper2(coins, j, amt - coins[j], dp);
         }
         dp[i][amt] = res;
@@ -97,14 +97,11 @@ public class CoinChange2 {
                 // because that is also the no. of ways we can get the same amount(OR LOGIC)
                 dp[i][s] = dp[i - 1][s];
                 if (s >= coins[i - 1])
-                    // and with those ways we add ways to make (curr amount - the coin we are
-                    // currently using)
-                    // because if we get those ways it is automatically equal to curr coin using
-                    // ways
-                    // then we wont do any work any effort for this coin
-                    // any way we are subtracting
+                    //it is enssured double counting is not happening here
+                    // after making all the amounts using 1 coin in the
+                    // next iteration of the outer loop the prev coin is never used
                     dp[i][s] += dp[i][s - coins[i - 1]];
-                    // [i][s - coin] because it can be use repeately
+                // [i][s - coin] because it can be use repeately
             }
         }
 
@@ -124,7 +121,7 @@ public class CoinChange2 {
         //  start to make  amts at coins[i]
         // and each coin can be used repeatedly
         for (int i = 0; i < coins.length; i++) {
-            for (int s = coins[i]; s < target + 1; s++) {
+            for (int s = coins[i]; s <= target; s++) {
                 dp[s] = (dp[s] + dp[s - coins[i]]);
             }
         }
@@ -169,7 +166,8 @@ public class CoinChange2 {
      * 1111| 112, 22 | 13
      * 11111 | 1112, 122 | 113, 23 (change32 go vertical)
      *
-     * change32
+     * change32 no double counting because each coin is used to make all the amounts it can
+     * and then never used
      * 1, 11, 111,   1111,    11111
      *     2,  12, 112,22, 1112,122
      *          3,     13,   113,23
