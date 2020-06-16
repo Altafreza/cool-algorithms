@@ -6,7 +6,11 @@
 
     <groupId>org.example</groupId>
     <artifactId>leetcode-datastructures</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>lld_interviews</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>

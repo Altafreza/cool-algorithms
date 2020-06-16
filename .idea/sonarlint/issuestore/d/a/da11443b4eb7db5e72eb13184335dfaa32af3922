@@ -1,10 +1,10 @@
 
 A
-java:S1659"Declare "b" on a separate line.(õ«óŠýÿÿÿÿ8Ì”¢Ú•.
-?
-java:S1659""Declare "lcpB" on a separate line.(”´É­8Ì”¢Ú•.
-l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ý­ó8Ì”¢Ú•.
-A
 java:S1659"Declare "c" on a separate line.(õ«óŠýÿÿÿÿ8Ì”¢Ú•.
 l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ý­ó8Ì”¢Ú•.
 l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ý­ó8Ì”¢Ú•.
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ý­ó8Ì”¢Ú•.
+?
+java:S1659""Declare "lcpB" on a separate line.(”´É­8Ì”¢Ú•.
+A
+java:S1659"Declare "b" on a separate line.(õ«óŠýÿÿÿÿ8Ì”¢Ú•.

@@ -49,6 +49,22 @@ public class CoinChange {
         return dp[amt];
     }
 
+    public static int coinChange123(int[] coins, int amount) {
+        // dp [i] is optimal minimum coins to make "i" amount from coins set
+        // which depends on optimal coins "i - cj" amount
+        int max = amount + 1;
+
+        int[][] dp = new int[amount + 1][coins.length + 1];
+        for (int i = 1; i <= amount; i++) { // for money from 1 to amount
+            Arrays.fill(dp[i], max);
+            for (int j = 1; j <= coins.length; j++) { // using each coin
+                dp[i][j] = dp[i][j - 1];
+                if (i >= coins[j - 1])
+                    dp[i][j] = Math.min(dp[i][j], dp[i - coins[j - 1]][j] + 1);
+            }
+        }
+        return dp[amount][coins.length] == amount + 1 ? -1 : dp[amount][coins.length];
+    }
 
     // top down
     public static int coinChange12(int[] coins, int amount) {
@@ -136,22 +152,6 @@ public class CoinChange {
         return dp[amount];
     }
 
-    public static int coinChange123(int[] coins, int amount) {
-        // dp [i] is optimal minimum coins to make "i" amount from coins set
-        // which depends on optimal coins "i - cj" amount
-        int max = amount + 1;
-
-        int[][] dp = new int[amount + 1][coins.length + 1];
-        for (int i = 1; i <= amount; i++) { // for money from 1 to amount
-            Arrays.fill(dp[i], max);
-            for (int j = 1; j <= coins.length; j++) { // using each coin
-                dp[i][j] = dp[i][j - 1];
-                if (i >= coins[j - 1])
-                    dp[i][j] = Math.min(dp[i][j], dp[i - coins[j - 1]][j] + 1);
-            }
-        }
-        return dp[amount][coins.length] == amount + 1 ? -1 : dp[amount][coins.length];
-    }
 
     public static void main(String[] args) {
         System.out.println((coinChange12(new int[]{1, 2, 3}, 5)));

@@ -152,8 +152,11 @@ public class CoinChange2 {
 
 
 
-    /* why double counting is bad
+    /*
+     * COINS :: AMOUNT
+     * why double counting is bad
      * Example for amount = 5 and 1, 2, 3
+
      * 1  <- for combination sum iv
      * 11 | 2
      * 111, 21 | 12 | 3
@@ -164,8 +167,9 @@ public class CoinChange2 {
      * 11 | 2
      * 111| 12 | 3
      * 1111| 112, 22 | 13
-     * 11111 | 1112, 122 | 113, 23 (change32 go vertical)
+     * 11111 | 1112, 122 | 113, 23 (change32 go vertical) check below
      *
+     * amount :: coins
      * change32 no double counting because each coin is used to make all the amounts it can
      * and then never used
      * 1, 11, 111,   1111,    11111

@@ -1,7 +1,7 @@
 
-N	java:S106ñ"9Replace this use of System.out or System.err by a logger.(Ï’Õ7
-Q	java:S125'"<This block of commented-out lines of code should be removed.(ããÍ≈
 q
 java:S1488"[Immediately return this expression instead of assigning it to the temporary variable "res".(≥¥≥Œ
 v
 java:S1488("[Immediately return this expression instead of assigning it to the temporary variable "res".(¥ÄÛÍ˝ˇˇˇˇ
+N	java:S106ñ"9Replace this use of System.out or System.err by a logger.(Ï’Õ7
+Q	java:S125'"<This block of commented-out lines of code should be removed.(ããÍ≈
