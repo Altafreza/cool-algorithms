@@ -3,6 +3,8 @@ package dynamicprograming.subsetdp;
 import java.util.Arrays;
 
 public class CoinChange {
+    private Integer[][] dp;
+
     //
     public static int coinChange89(int[] coins, int amount) {
         // dp [i] is optimal minimum coins to make "i" amount from coins set
@@ -113,7 +115,6 @@ public class CoinChange {
         return dp[amount];
     }
 
-
     public static int coinChange(int[] coins, int amount) {
         int[][] dp = new int[coins.length + 1][amount + 1];
         int max = amount + 1;
@@ -152,9 +153,41 @@ public class CoinChange {
         return dp[amount];
     }
 
-
     public static void main(String[] args) {
         System.out.println((coinChange12(new int[]{1, 2, 3}, 5)));
+    }
+
+    public int coinChangeRecursiveTakeSkip(int[] coins, int amount) {
+        if (amount == 0)
+            return 0;
+        if (coins.length == 0)
+            return -1;
+        dp = new Integer[coins.length][amount + 1];
+        int res = coinChangeFrom(coins, amount, 0);
+        return res == Integer.MAX_VALUE ? -1 : res;
+    }
+
+    private int coinChangeFrom(int[] coins, int amount, int currentIndex) {
+        if (amount == 0)
+            return 0;
+
+        if (amount < 0 || currentIndex == coins.length)
+            return Integer.MAX_VALUE;
+
+        if (dp[currentIndex][amount] != null)
+            return dp[currentIndex][amount];
+
+        // Recursive call after selecting the coin at the currentIndex
+        int count1 = Integer.MAX_VALUE;
+        int res = coinChangeFrom(coins, amount - coins[currentIndex], currentIndex);
+        if (res != Integer.MAX_VALUE) {
+            count1 = res + 1;
+        }
+
+        // Recursive call after excluding the coin at the currentIndex
+        int count2 = coinChangeFrom(coins, amount, currentIndex + 1);
+
+        return dp[currentIndex][amount] = Math.min(count1, count2);
     }
 
 }

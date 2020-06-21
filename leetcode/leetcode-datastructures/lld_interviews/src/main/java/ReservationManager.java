@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -26,9 +27,25 @@ public class ReservationManager {
         reservations = new ArrayList<>();
         tables = new ArrayList<>();
     }
+
+    public void createCustomer(){
+
+    }
+
+    public void makeReservation(){
+
+    }
 }
 
 class Reservation {
+    // Identifiers
+    Integer resId;
+    Integer custId;
+    Integer tableId;
+    // res specific data
+    LocalDate creationTime;
+    LocalDate reservationTime;
+
 
 }
 

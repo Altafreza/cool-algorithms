@@ -45,16 +45,29 @@ class Knapsack {
 
     // non repeating non double counting
     private static long maxKnapsack1(int[] ws, long[] vs, int w) {
-        long[][] dp = new long[ws.length+1][w + 1];
+        long[][] dp = new long[ws.length + 1][w + 1];
 
         for (int i = 1; i <= ws.length; i++) {
             for (int s = 1; s <= w; s++) {
-                dp[i][s] = dp[i-1][s];
-                if(s >= ws[i - 1])
-                    dp[i][s] = Math.max(dp[i-1][s - ws[i-1]] + vs[i-1], dp[i][s]);
+                dp[i][s] = dp[i - 1][s];// not taking the curr obj and considering the previous objects for the same weight
+                if (s >= ws[i - 1])
+                    dp[i][s] = Math.max(dp[i - 1][s - ws[i - 1]] + vs[i - 1], dp[i][s]); // taking the curr obj but not repeating itself
+                // not repeating as considering the previous objects for the remaining weight
             }
         }
         return dp[ws.length][w];
+    }
+
+    public int knapsack(int[] vs, int[] ws, int w) {
+        int[] dp = new int[w + 1];
+
+        for (int i = 1; i < ws.length; i++) {
+            for (int j = w; j <= ws[i]; j++) {
+                // dp[j] =
+            }
+        }
+
+        return 0;
     }
 }
 

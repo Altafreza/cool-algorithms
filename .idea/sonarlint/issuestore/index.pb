@@ -73,8 +73,6 @@ X
 (codingbat/src/main/java/Recursion_1.java,7\c\7c6824435cf2a2df2d08bbd56681a516563e2e34
 U
 %codingbat/src/main/java/String_1.java,9\2\92f0c9d39f3057063af2488e40de2cf7adf9a4d8
-b
-2codeforces/src/contestquestions/interfacetest.java,1\8\1811209e206522c6a8223d2fb5429ecbc5b089f9
 k
 ;leetcode/src/backtracking/combinatorics/EqualPartition.java,1\d\1df1d7a44f59a81c9f4aaea073d02b933155b7a4
 ]

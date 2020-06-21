@@ -108,26 +108,7 @@ public class CoinChange2 {
         return dp[coins.length][amount];
     }
 
-    // 1D of above version
-    // for each coin whether to take or not recursion to make each amount
-    public static int change32(int target, int[] coins) {
-        // dp[i] no of ways to make i amt using coins[0..i]
-        int[] dp = new int[target + 1];
-        dp[0] = 1;
 
-        // No Double counting
-        // this replicates the below recursion
-        // because for each coin we tend to make different amounts
-        //  start to make  amts at coins[i]
-        // and each coin can be used repeatedly
-        for (int i = 0; i < coins.length; i++) {
-            for (int s = coins[i]; s <= target; s++) {
-                dp[s] = (dp[s] + dp[s - coins[i]]);
-            }
-        }
-
-        return dp[target];
-    }
 
     // this wont work here because of double counting
     // this works in case of combination sum iv
@@ -153,7 +134,7 @@ public class CoinChange2 {
 
 
     /*
-     * COINS :: AMOUNT
+     *  AMOUNT :: COINS
      * why double counting is bad
      * Example for amount = 5 and 1, 2, 3
 
@@ -169,12 +150,33 @@ public class CoinChange2 {
      * 1111| 112, 22 | 13
      * 11111 | 1112, 122 | 113, 23 (change32 go vertical) check below
      *
-     * amount :: coins
+     * coins :: amount
      * change32 no double counting because each coin is used to make all the amounts it can
      * and then never used
      * 1, 11, 111,   1111,    11111
      *     2,  12, 112,22, 1112,122
      *          3,     13,   113,23
      * Real Answer : 11111, 1112, 122, 113 ,23
-     * */
+     * */// 1D of above version
+    // for each coin whether to take or not recursion to make each amount
+    public static int change32(int target, int[] coins) {
+        // dp[i] no of ways to make i amt using coins[0..i]
+        int[] dp = new int[target + 1];
+        dp[0] = 1;
+
+        // No Double counting
+        // this replicates the below recursion
+        // because for each coin we tend to make different amounts
+        //  start to make  amts at coins[i]
+        // and each coin can be used repeatedly
+        for (int i = 0; i < coins.length; i++) {
+            for (int s = coins[i]; s <= target; s++) {
+                dp[s] = (dp[s] + dp[s - coins[i]]);
+                // 1st option - ways to get the same amount but with subset of all previous coins
+                // 2nd optiom - use the current coin and get ways to get the earlier amount
+            }
+        }
+
+        return dp[target];
+    }
 }

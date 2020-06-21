@@ -1,8 +1,5 @@
 package dynamicprograming;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class LongestIncreasingSubsequence {
     static public int lengthOfLIS(int[] a) {
         int n = a.length;
@@ -59,36 +56,35 @@ public class LongestIncreasingSubsequence {
     }
 
     public static void main(String[] args) {
-        System.out.println(lengthOfLIS(new int[]{10, 9, 2, 5, 3, 7, 101, 18}));
+        System.out.println(lengthOfLIS1(new int[]{1, 3, 6, 7, 9, 4, 10, 5, 6}));
     }
 
-    static List<Integer> findLIS(int[] arr) {
-        List<List<Integer>> cache = new ArrayList<>();
-        for (int i = 0; i < arr.length; i++) {
-            cache.add(new ArrayList<>());
-        }
+    static public int lengthOfLIS1(int[] a) {
+        int n = a.length;
+        //int[] dp = new int[];
+        return helper1(a, n, new int[n + 1]);
 
-        cache.get(0).add(arr[0]);
-
-        for (int i = 1; i < arr.length; i++) {
-            for (int j = 0; j < i; j++) {
-                if (arr[i] > arr[j] && cache.get(i).size() < cache.get(j).size() + 1) {
-                    cache.set(i, new ArrayList<>(cache.get(j)));
-                }
-            }
-            cache.get(i).add(arr[i]);
-        }
-
-        List<Integer> longest = cache.get(0);
-        for (int i = 0; i < cache.size(); i++) {
-            if (longest.size() < cache.get(i).size()) {
-                longest = new ArrayList<>(cache.get(i));
-            }
-        }
-
-        return longest;
     }
 
+    private static int helper1(int[] a, int curr, int[] dp) {
+        int res = 0; // base case
+        int cEl = 0;
+        if (dp[curr] != 0) return dp[curr];
+        if (curr == a.length) cEl = Integer.MAX_VALUE;
+        else cEl = a[curr];
+        for (int i = curr - 1; i >= 0; i--) {
+            if (a[i] < cEl) {
+                res = Math.max(res, 1 + helper1(a, i, dp));
+            }
+        }
+        dp[curr] = res;
+        return res;
+    }
+
+    /**
+     * @param a
+     * @return
+     */
     public int helper(final int[] a) {
         int[] dp = new int[a.length];
         if (a.length == 0)
@@ -110,14 +106,5 @@ public class LongestIncreasingSubsequence {
 
         return max;
     }
-
-    /*
-     * static int lisBottomUp(final int[] a) { int n = a.length; int[][] dp = new
-     * int[n + 1][n];
-     *
-     * for() return 0;
-     *
-     * }
-     */
 
 }
