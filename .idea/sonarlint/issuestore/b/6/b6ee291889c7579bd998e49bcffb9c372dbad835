@@ -1,8 +1,8 @@
 
+?
+java:S1659 ""Declare "blen" on a separate line.(ê›ÌØ8‰–Ï•.
 U	java:S1060"9Replace this use of System.out or System.err by a logger.(ÄÅ¿·8ô­«Ğ•.
 Y
 java:S1854"7Remove this useless assignment to local variable "res".(çºÈøÿÿÿÿ8ÏŒ™Ğ•.
-?
-java:S1659 ""Declare "blen" on a separate line.(ê›ÌØ8‰–Ï•.
 D
 java:S1659""Declare "blen" on a separate line.(šûšéûÿÿÿÿ8‰–Ï•.

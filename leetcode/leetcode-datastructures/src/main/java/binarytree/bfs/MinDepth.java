@@ -1,4 +1,4 @@
-package binarytree;
+package binarytree.bfs;
 
 import commons.TreeNode;
 

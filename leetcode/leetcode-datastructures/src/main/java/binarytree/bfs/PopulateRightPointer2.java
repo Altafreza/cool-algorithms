@@ -1,4 +1,4 @@
-package binarytree;
+package binarytree.bfs;
 
 public class PopulateRightPointer2 {
     public Node connect1(Node root) {

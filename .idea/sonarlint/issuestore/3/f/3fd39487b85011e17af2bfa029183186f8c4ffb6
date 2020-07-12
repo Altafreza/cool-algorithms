@@ -1,0 +1,10 @@
+
+L
+java:S1854"6Remove this useless assignment to local variable "c2".(Ž Ù–
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ÇÑ——
+Q
+java:S1854"6Remove this useless assignment to local variable "c1".(ðîÀ“ûÿÿÿÿ
+B
+java:S1481"'Remove this unused "c1" local variable.(ðîÀ“ûÿÿÿÿ
+=
+java:S1481"'Remove this unused "c2" local variable.(Ž Ù–

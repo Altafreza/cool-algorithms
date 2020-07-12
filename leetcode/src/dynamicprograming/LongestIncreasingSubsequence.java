@@ -12,6 +12,7 @@ public class LongestIncreasingSubsequence {
         return 0;
     }
 
+    // for loop recurrence
     private static int helper(int[] a, int prev, int[] memo) {
         int prevEle = 0;
         if (prev == -1)
@@ -86,7 +87,7 @@ public class LongestIncreasingSubsequence {
      * @return
      */
     public int helper(final int[] a) {
-        int[] dp = new int[a.length];
+        int[] dp = new int[a.length]; // same as len of array
         if (a.length == 0)
             return 0;
         dp[0] = 1;
@@ -98,6 +99,7 @@ public class LongestIncreasingSubsequence {
                     dp[i] = Math.max(1 + dp[j], dp[i]);
                 }
             }
+
         }
         int max = Integer.MIN_VALUE;
         for (int b : dp) {

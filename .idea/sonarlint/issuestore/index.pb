@@ -89,3 +89,9 @@ Gleetcode/leetcode-datastructures/src/main/java/binarytree/MinDepth.java,f\b\fb
 Tleetcode/leetcode-datastructures/src/main/java/binarytree/PopulateRightPointer2.java,5\c\5c232e6c3b3d673856350bb2c4ea1055c6846e21
 ƒ
 Sleetcode/leetcode-datastructures/src/main/java/binarytree/PopulateRightPointer.java,e\1\e1843e0239b5dc229a054150b0eab439986a4212
+”
+dleetcode/leetcode-datastructures/lld_interviews/src/main/java/learningstatic/JavaStaticVariable.java,2\4\24ca58116e7f85ac039d4211be2c809be442f367
+…
+Uleetcode/leetcode-datastructures/lld_interviews/src/main/java/learningstatic/Car.java,9\2\92c3477f9997bf8b569fbc970dbf98f0d4798a31
+‹
+[leetcode/leetcode-datastructures/lld_interviews/src/main/java/learningstatic/CarRunner.java,3\f\3fd39487b85011e17af2bfa029183186f8c4ffb6
