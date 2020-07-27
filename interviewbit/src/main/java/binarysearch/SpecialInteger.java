@@ -9,15 +9,30 @@ public class SpecialInteger {
         // values for k subarray size
         if (new Integer(B) == null) return 0;
         // low : min possible high: min impossible
-        int low = 0, high = A.length;
+        int low = 1, high = A.length + 1;
 
-        while (high >= low) { // low will become the max possible
+        while (high - low > 1) { // low will become the max possible
             int mid = (high + low) / 2;
             if (isPossible(A, mid, B)) low = mid; // before mid are also possible
             else high = mid; // after mid is also impossible
         }
 
         return low;
+    }
+
+    public int solve1(int[] A, int B) {
+        // values for k subarray size
+        if (new Integer(B) == null) return 0;
+        // low : min possible || high: max possible
+        int low = 1, high = A.length;
+
+        while (high >= low) { // low will become the max possible
+            int mid = (high + low) / 2;
+            if (isPossible(A, mid, B)) low = mid + 1; // before mid are also possible
+            else high = mid - 1; // after mid is also impossible
+        }
+
+        return low - 1;
     }
 
     // 1 2 3 4 5

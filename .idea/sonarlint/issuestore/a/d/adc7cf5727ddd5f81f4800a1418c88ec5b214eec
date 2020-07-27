@@ -1,19 +1,19 @@
 
 `
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µ¦…Êýÿÿÿÿ
-[
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(úÅ·¹
 V	java:S125"<This block of commented-out lines of code should be removed.(ý¹ª°þÿÿÿÿ
+N	java:S106B"9Replace this use of System.out or System.err by a logger.(®ä§§
+D
+java:S5413")Verify that "remove()" is used correctly.(þÌÁÊÿÿÿÿÿ
 [
 java:S11241"EReorder the modifiers to comply with the Java Language Specification.(·«¹
-[
-java:S1124 "EReorder the modifiers to comply with the Java Language Specification.(«µ™ß
-A
-java:S1481
-"&Remove this unused "n" local variable.(à„¸šüÿÿÿÿ
 P
 java:S1854
 "5Remove this useless assignment to local variable "n".(à„¸šüÿÿÿÿ
-D
-java:S5413")Verify that "remove()" is used correctly.(þÌÁÊÿÿÿÿÿ
-N	java:S106B"9Replace this use of System.out or System.err by a logger.(®ä§§
+[
+java:S1124 "EReorder the modifiers to comply with the Java Language Specification.(«µ™ß
+[
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(úÅ·¹
+A
+java:S1481
+"&Remove this unused "n" local variable.(à„¸šüÿÿÿÿ

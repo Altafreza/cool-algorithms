@@ -9,12 +9,14 @@
         <module name="lld_interviews" />
         <module name="codingblocks" />
         <module name="interviewbit" />
+        <module name="cses" />
         <module name="codingbat" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="codingbat" target="11" />
       <module name="codingblocks" target="11" />
+      <module name="cses" target="11" />
       <module name="interviewbit" target="11" />
       <module name="leetcode-datastructures" target="11" />
       <module name="lld_interviews" target="11" />

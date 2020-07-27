@@ -2,7 +2,7 @@ package dynamicprogramming;
 
 import java.util.Scanner;
 
-public class Frog2 {
+public class B_Frog2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt(), k = sc.nextInt();

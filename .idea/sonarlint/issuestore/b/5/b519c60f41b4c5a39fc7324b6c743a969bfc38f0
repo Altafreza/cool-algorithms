@@ -1,24 +1,20 @@
 
 [
-java:S2184"ECast one of the operands of this subtraction operation to a "double".(ü²ˆÃ
+java:S2184""ECast one of the operands of this subtraction operation to a "double".(¯‡Õ
 [
-java:S2184"ECast one of the operands of this subtraction operation to a "double".(ü²ˆÃ
+java:S2184"ECast one of the operands of this subtraction operation to a "double".(ü²ˆÃ
+b
+java:S21845"ECast one of the operands of this subtraction operation to a "double".(¯‡Õ8ÿæ‡Õµ.
+U	java:S106G"9Replace this use of System.out or System.err by a logger.(°Î³8ÿæ‡Õµ.
 [
-java:S2184"ECast one of the operands of this subtraction operation to a "double".(úí´ÿ
-[
-java:S2184 "ECast one of the operands of this subtraction operation to a "double".(¯‡Õ
-[
-java:S21841"ECast one of the operands of this subtraction operation to a "double".(úí´ÿ
-[
-java:S21842"ECast one of the operands of this subtraction operation to a "double".(¯‡Õ
-–
-java:S26813"{This statement will not be executed conditionally; only the first statement will be. The rest will execute unconditionally.(®¬¨…ûÿÿÿÿ
+java:S21844"ECast one of the operands of this subtraction operation to a "double".(úí´ÿ
 6
-java:S1659 " Declare "hi" on a separate line.(¯‡Õ
-6
-java:S16592" Declare "hi" on a separate line.(¯‡Õ
-R
-java:S39723"7Move this "if" to a new line or add the missing "else".(®¬¨…ûÿÿÿÿ
-N
-java:S3878A"8Remove this array creation and simply pass the elements.(ıïÊö
-N	java:S106B"9Replace this use of System.out or System.err by a logger.(°Î³
+java:S1659"" Declare "hi" on a separate line.(¯‡Õ
+U
+java:S3878F"8Remove this array creation and simply pass the elements.(ıïÊö8ÿæ‡Õµ.
+[
+java:S2184"ECast one of the operands of this subtraction operation to a "double".(ü²ˆÃ
+=
+java:S16595" Declare "hi" on a separate line.(¯‡Õ8ÿæ‡Õµ.
+[
+java:S2184!"ECast one of the operands of this subtraction operation to a "double".(úí´ÿ

@@ -23,6 +23,6 @@ public class MeetingRooms {
     }
 
     public static void main(String[] args) {
-        System.out.println(solve(new int[][]{{1, 18}, {18, 23}, {15, 29}, {4, 15}, {2, 11}, {5, 13}}));
+        System.out.println(solve(new int[][]{{1, 18}, {18, 23}, {15, 29}, {4, 15}, {2, 11}, {12, 13}}));
     }
 }

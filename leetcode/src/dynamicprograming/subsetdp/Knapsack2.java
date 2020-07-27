@@ -15,7 +15,7 @@ public class Knapsack2 {
             ws[i] = sc.nextInt();
             vs[i] = sc.nextInt();
         }
-        System.out.println(maxKnapsack2D(ws, vs, w));
+        System.out.println(maxKnapsack1D(ws, vs, w));
     }
 
 
@@ -27,7 +27,7 @@ public class Knapsack2 {
         Arrays.fill(dp, w + 1);
         dp[0] = 0;
         for (int i = 0; i < ws.length; i++) {
-            for (int s = totVal; s >= 0; s--) {
+            for (int s = 0; s <= totVal; s++) {
                 if (s >= vs[i])
                     dp[s] = Math.min(dp[s - vs[i]] + ws[i], dp[s]);
             }

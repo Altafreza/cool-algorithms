@@ -1,34 +1,30 @@
 package dynamicprogramming;
 
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
-import java.io.InputStream;
-import java.io.IOException;
+import java.io.*;
 import java.util.StringTokenizer;
 
-class MinimumStepsToOne
-{
-    public static void main (String[] args) {
-        try{
+class MinimumStepsToOne {
+    public static void main(String[] args) {
+        try {
             input.init(System.in);
             PrintWriter out = new PrintWriter(System.out);
             int t = input.nextInt();
             int[] dp = new int[20000001];
             for (int i = 1; i <= t; i++) {
                 int n = input.nextInt();
-                out.println("Case "+ i + ": "+ getMinSteps(n, dp));
+                out.println("Case " + i + ": " + getMinSteps(n, dp));
             }
             out.close();
 
-        }catch(Exception e){return;}
+        } catch (Exception e) {
+            return;
+        }
     }
 
 
     // function to calculate min steps
-    static int getMinSteps(int n, int memo[])
-    {
+    static int getMinSteps(int n, int memo[]) {
         // base case
         if (n == 1)
             return 0;
@@ -42,10 +38,10 @@ class MinimumStepsToOne
 
         if (n % 2 == 0)
             res = Math.min(res,
-                    1+getMinSteps(n / 2, memo));
+                    1 + getMinSteps(n / 2, memo));
         if (n % 3 == 0)
             res = Math.min(res,
-                    1+getMinSteps(n / 3, memo));
+                    1 + getMinSteps(n / 3, memo));
 
         // store memo[n] and return
         memo[n] = res;
@@ -56,30 +52,34 @@ class MinimumStepsToOne
         static BufferedReader reader;
         static StringTokenizer tokenizer;
 
-        /** call this method to initialize reader for InputStream */
+        /**
+         * call this method to initialize reader for InputStream
+         */
         static void init(InputStream input) {
             reader = new BufferedReader(
-                    new InputStreamReader(input) );
+                    new InputStreamReader(input));
             tokenizer = new StringTokenizer("");
         }
 
-        /** get next word */
+        /**
+         * get next word
+         */
         static String next() throws IOException {
-            while ( ! tokenizer.hasMoreTokens() ) {
-                //TODO add check for eof if necessary
+            while (!tokenizer.hasMoreTokens()) {
                 tokenizer = new StringTokenizer(
-                        reader.readLine() );
+                        reader.readLine());
             }
             return tokenizer.nextToken();
         }
 
         static int nextInt() throws IOException {
-            return Integer.parseInt( next() );
+            return Integer.parseInt(next());
         }
 
         static double nextDouble() throws IOException {
-            return Double.parseDouble( next() );
+            return Double.parseDouble(next());
         }
+
         static String nextLine() throws IOException {
             return reader.readLine();
         }

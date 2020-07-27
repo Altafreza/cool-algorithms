@@ -1,10 +1,13 @@
 package dynamicprograming.subsetdp;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 class Knapsack {
     private static long maxKnapsack(int[] ws, long[] vs, int idx, int total, long[][] dp) {
-        if (total <= 0 || idx == ws.length) return 0;
+        if (total == 0) return 0;
+
+        if(total < 0 || idx == ws.length) return Integer.MIN_VALUE;
 
         if (dp[idx][total] != 0) {
             return dp[idx][total];
@@ -46,7 +49,8 @@ class Knapsack {
     // non repeating non double counting
     private static long maxKnapsack1(int[] ws, long[] vs, int w) {
         long[][] dp = new long[ws.length + 1][w + 1];
-
+        Arrays.fill(dp[0], Integer.MIN_VALUE);
+        dp[0][0] = 0;
         for (int i = 1; i <= ws.length; i++) {
             for (int s = 1; s <= w; s++) {
                 dp[i][s] = dp[i - 1][s];// not taking the curr obj and considering the previous objects for the same weight

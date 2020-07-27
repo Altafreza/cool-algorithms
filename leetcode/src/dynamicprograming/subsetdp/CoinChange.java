@@ -119,10 +119,8 @@ public class CoinChange {
         int[][] dp = new int[coins.length + 1][amount + 1];
         int max = amount + 1;
 
-        for (int i = 0; i <= coins.length; i++) {
-            Arrays.fill(dp[i], max);
-            dp[i][0] = 0;
-        }
+        Arrays.fill(dp[0], max);
+        dp[0][0] = 0;
 
         for (int i = 1; i <= coins.length; i++) {
             for (int s = 1; s <= amount; s++) {

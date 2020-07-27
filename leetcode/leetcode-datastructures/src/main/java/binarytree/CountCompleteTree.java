@@ -5,6 +5,8 @@ import utils.TreeUtils;
 
 import java.util.Arrays;
 
+/*
+ * Count Nodes in the last level of complete binary tree*/
 public class CountCompleteTree {
     public static int height(TreeNode root) {
         if (root == null) return 0;
@@ -17,7 +19,7 @@ public class CountCompleteTree {
         if (h == 1) return true;
 
         if (((node >> (h - 2)) & 1) == 1) {
-            node = node % (int) Math.pow(2, h - 1);
+             node = node % (int) Math.pow(2, h - 1);
             return isExist(root.right, node, h - 1);
         } else if (((node >> (h - 2)) & 1) == 0) {
             node = node % (int) Math.pow(2, h - 1);
@@ -44,11 +46,13 @@ public class CountCompleteTree {
 
         return penultimate + low;
     }
+
     public static int countNodes2(TreeNode a) {
         int h = height(a);
         int penultimate = (int) Math.pow(2, h - 1) - 1;
         int low = 0, hi = (int) Math.pow(2, h - 1) - 1;
-        if(a == null) return 0;if(h == 1) return 1;
+        if (a == null) return 0;
+        if (h == 1) return 1;
         while (low < hi) {
             int mid = (low + hi) / 2 + 1;
 
@@ -61,6 +65,7 @@ public class CountCompleteTree {
 
         return penultimate + low + 1;
     }
+
     public static void main(String[] args) {
         TreeNode root = TreeUtils.constructBinaryTree(Arrays.asList(new Integer[]{1, 2, 3}));
         System.out.println(countNodes(root));
