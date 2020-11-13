@@ -1,11 +1,14 @@
 package greedy;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Arrays;
 import java.util.Comparator;
 
 public class JobSequencing {
     public static void main(String[] args) {
         System.out.println(maxProfit(new int[]{2, 1, 2, 1, 3}, new int[]{100, 19, 27, 25, 15}));
+        StringUtils.isBlank(null);
     }
 
     private static int maxProfit(int[] a, int[] b) {

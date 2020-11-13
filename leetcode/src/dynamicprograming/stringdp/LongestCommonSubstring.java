@@ -1,35 +1,36 @@
 package dynamicprograming.stringdp;
 
 public class LongestCommonSubstring {
-    String X;
-    String Y;
     Integer[][][] dp;
 
-    public int longestCommonSubstring1(String A, String B) {
-        this.X = A;
-        this.Y = B;
-        int m = A.length();
-        int n = B.length();
-        dp = new Integer[m + 1][n + 1][Math.max(m, n)];
-        return lcs(m, n, 0);
+    public static int longestCommonSubstring1(String a, String b) {
+        int m = a.length();
+        int n = b.length();
+        //dp = new Integer[m + 1][n + 1][Math.max(m, n)];
+        return lcs(a.toCharArray(), b.toCharArray(), m - 1, n - 1);
     }
 
-    int lcs(int i, int j, int count) {
+    static int lcs(char[] a, char[] b, int i, int j) {
 
-        if (i <= 0 || j <= 0) {
-            return count;
+        if (i < 0 || j < 0) {
+            return 0;
         }
 
-        if (dp[i][j][count] != null) return dp[i][j][count];
+        //if (dp[i][j][count] != null) return dp[i][j][count];
 
-        int lc = count;
-        if (X.charAt(i - 1) == Y.charAt(j - 1)) {
-            lc = lcs(i - 1, j - 1, count + 1);
+        int lc = 0;
+        if (a[i] == b[j]) {
+            lc = 1 + lcs(a, b, i - 1, j - 1);
+        } else {
+            lc = Math.max(lcs(a, b, i, j - 1),
+                    lcs(a, b, i - 1, j));
+            //dp[i][j][count] = x;}
         }
-        int x = Math.max(lc, Math.max(lcs(i, j - 1, 0),
-                lcs(i - 1, j, 0)));
-        dp[i][j][count] = x;
-        return x;
+        return lc;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(longestCommonSubstring1("zxabcdezy", "yzabcdezx"));
     }
 
     public int longestCommonSubstring(String str1, String str2) {

@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTreePaths {
+    // Traversing
     public List<String> binaryTreePaths(TreeNode root) {
         List<String> res = new ArrayList<>();
         dfs(res, root, "");
@@ -25,9 +26,9 @@ public class BinaryTreePaths {
 
     public List<String> binaryTreePathsDandC(TreeNode root) {
         List<String> paths = new ArrayList<>();
-        if(root == null) return paths;
+        if (root == null) return paths;
 
-        if(root.left == null && root.right == null){
+        if (root.left == null && root.right == null) {
             paths.add("" + root.val);
             return paths;
         }
@@ -35,11 +36,11 @@ public class BinaryTreePaths {
         List<String> leftPaths = binaryTreePaths(root.left);
         List<String> rightPaths = binaryTreePaths(root.right);
 
-        for(String path : leftPaths){
+        for (String path : leftPaths) {
             paths.add(root.val + "->" + path);
         }
 
-        for(String path : rightPaths){
+        for (String path : rightPaths) {
             paths.add(root.val + "->" + path);
         }
         return paths;

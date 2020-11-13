@@ -2,6 +2,7 @@ package dynamicprogramming;
 
 import java.util.Scanner;
 
+/*Longest Common Subsequence*/
 public class F_LCS {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

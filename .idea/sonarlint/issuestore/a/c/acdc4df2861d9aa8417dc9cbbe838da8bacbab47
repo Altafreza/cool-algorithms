@@ -1,13 +1,13 @@
 
+Z	java:S106!"9Replace this use of System.out or System.err by a logger.(»¨í’üÿÿÿÿ8ğš«».
 o
-java:S3776#"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(…Ë”œ8Ëş¹Ñ•.
-h	java:S116"LRename this field "X" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÅÍ8Ëş¹Ñ•.
-Y
-java:S18549"<Remove this useless assignment to local variable "endIndex".(é·Æì8Ëş¹Ñ•.
-R
-java:S1117)"5Rename "dp" which hides the field declared at line 6.(†ŸåÀ8Ëş¹Ñ•.
+java:S3776$"RRefactor this method to reduce its Cognitive Complexity from 16 to the 15 allowed.(…Ë”œ8Ëş¹Ñ•.
 O
-java:S1481*"-Remove this unused "endIndex" local variable.(Ë³Àëùÿÿÿÿ8Ëş¹Ñ•.
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şŸÁ¸şÿÿÿÿ8Ëş¹Ñ•.
-r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şŸÁ¸şÿÿÿÿ8Ëş¹Ñ•.
-h	java:S116"LRename this field "Y" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã«´ö8Ëş¹Ñ•.
+java:S1481+"-Remove this unused "endIndex" local variable.(Ë³Àëùÿÿÿÿ8Ëş¹Ñ•.
+R
+java:S1117*"5Rename "dp" which hides the field declared at line 4.(†ŸåÀ8Ëş¹Ñ•.
+X	java:S125"<This block of commented-out lines of code should be removed.(Ùª“¦8¿íş™».
+Y
+java:S1854:"<Remove this useless assignment to local variable "endIndex".(é·Æì8Ëş¹Ñ•.
+X	java:S125	"<This block of commented-out lines of code should be removed.(¶ƒ¦¦8 è¹¼.
+X	java:S125"<This block of commented-out lines of code should be removed.(Å˜‰Ô8 è¹¼.

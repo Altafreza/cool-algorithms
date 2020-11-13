@@ -6,20 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="uva" />
+        <module name="cses" />
         <module name="lld_interviews" />
         <module name="codingblocks" />
         <module name="interviewbit" />
-        <module name="cses" />
         <module name="codingbat" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="codingbat" target="11" />
+      <module name="codingbat" target="1.5" />
       <module name="codingblocks" target="11" />
-      <module name="cses" target="11" />
-      <module name="interviewbit" target="11" />
+      <module name="cses" target="1.5" />
+      <module name="interviewbit" target="6" />
       <module name="leetcode-datastructures" target="11" />
       <module name="lld_interviews" target="11" />
+      <module name="uva" target="9" />
     </bytecodeTargetLevel>
   </component>
 </project>
