@@ -1,10 +1,14 @@
 package dynamicprogramming;
 
-import java.util.Scanner;
+
+import java.io.PrintWriter;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class A_Frog1 {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        FastScanner sc = new FastScanner(System.in);
+        PrintWriter out = new PrintWriter(System.out);
 
         int n = sc.nextInt();
         int[] num = new int[n];
@@ -21,19 +25,46 @@ public class A_Frog1 {
                     dp[i - 2] + Math.abs(num[i] - num[i - 2]));
         }
 
-        //System.out.println(dp[n-1]);
-        System.out.println(helper(num, 0));
-
-
+        out.println(dp[n-1]);
+        //out.println(helper(num, 0));
+        out.close();
     }
 
     private static int helper(int[] num, int i) {
         if (i == num.length - 1) return 0;
-        if( i == num.length - 2) return Math.abs(num[i] - num[i+1]);
+        if (i == num.length - 2) return Math.abs(num[i] - num[i + 1]);
 
         int opt1 = Math.abs(num[i] - num[i + 1]) + helper(num, i + 1);
         int opt2 = Math.abs(num[i] - num[i + 2]) + helper(num, i + 2);
 
         return Math.min(opt1, opt2);
+    }
+
+    static class FastScanner {
+        BufferedReader br;
+        StringTokenizer st;
+
+        FastScanner(InputStream stream) {
+            try {
+                br = new BufferedReader(new InputStreamReader(stream));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        String next() {
+            while (st == null || !st.hasMoreTokens()) {
+                try {
+                    st = new StringTokenizer(br.readLine());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            return st.nextToken();
+        }
+
+        int nextInt() {
+            return Integer.parseInt(next());
+        }
     }
 }

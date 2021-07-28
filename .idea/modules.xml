@@ -6,10 +6,11 @@
       <module fileurl="file://$PROJECT_DIR$/codingbat/codingbat.iml" filepath="$PROJECT_DIR$/codingbat/codingbat.iml" />
       <module fileurl="file://$PROJECT_DIR$/codingblocks/codingblocks.iml" filepath="$PROJECT_DIR$/codingblocks/codingblocks.iml" />
       <module fileurl="file://$PROJECT_DIR$/cses/cses.iml" filepath="$PROJECT_DIR$/cses/cses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/educative-algo/educative-algo.iml" filepath="$PROJECT_DIR$/educative-algo/educative-algo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hackerearth/hackerearth.iml" filepath="$PROJECT_DIR$/hackerearth/hackerearth.iml" />
       <module fileurl="file://$PROJECT_DIR$/interviewbit/interviewbit.iml" filepath="$PROJECT_DIR$/interviewbit/interviewbit.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode.iml" filepath="$PROJECT_DIR$/leetcode/leetcode.iml" />
       <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode-datastructures/leetcode-datastructures.iml" filepath="$PROJECT_DIR$/leetcode/leetcode-datastructures/leetcode-datastructures.iml" />
-      <module fileurl="file://$PROJECT_DIR$/leetcode/leetcode-datastructures/lld_interviews/lld_interviews.iml" filepath="$PROJECT_DIR$/leetcode/leetcode-datastructures/lld_interviews/lld_interviews.iml" />
       <module fileurl="file://$PROJECT_DIR$/uva/uva.iml" filepath="$PROJECT_DIR$/uva/uva.iml" />
     </modules>
   </component>

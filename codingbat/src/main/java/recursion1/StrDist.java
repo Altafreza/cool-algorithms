@@ -31,6 +31,5 @@ public class StrDist {
     public static void main(String[] args) {
         System.out.println(strDist("catcowcat", "cat"));
         System.out.println(strDist("catcowcat", "cow"));
-        System.out.println(strDist("cccatcowcatxx", "cat"));
     }
 }

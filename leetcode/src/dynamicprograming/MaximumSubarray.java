@@ -23,7 +23,9 @@ public class MaximumSubarray {
         int maxSum = nums[0], sum = nums[0];
 
         for (int i = 1; i < nums.length; i++) {
+            // pruning non feasible solutions
             sum = Math.max(sum + nums[i], nums[i]);
+            // capturing solution
             maxSum = Math.max(maxSum, sum);
         }
         return maxSum;

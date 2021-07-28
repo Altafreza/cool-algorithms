@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0d7897af-e3a9-42a0-a222-aac85a9d17e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_apache_commons_commons_lang3_3_11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../educative-algo/educative-algo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../educative-algo/src/sliding-window/LongestRepeatingCharacterReplacement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../educative-algo/src/sliding-window/LongestSubstringAtmostKDistinctChars.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codeforces/codeforces.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../codeforces/codeforces.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codingbat/codingbat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../codingbat/codingbat.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codingbat/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../codingbat/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codingbat/src/main/java/recursion1/StrDist.java" beforeDir="false" afterPath="$PROJECT_DIR$/../codingbat/src/main/java/recursion1/StrDist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../codingblocks/src/main/java/mathematics/inclusion_exclusion/LowesRound1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cses/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../cses/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/interviewbit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/interviewbit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/binarysearch/AggressiveCows.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/binarysearch/AggressiveCows.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/binarysearch/AllocateBooks.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/binarysearch/AllocateBooks.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/binarysearch/SpecialInteger.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/binarysearch/SpecialInteger.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/greedy/JobSequencing$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/greedy/JobSequencing$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/greedy/JobSequencing$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/greedy/JobSequencing$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/greedy/JobSequencing.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/greedy/JobSequencing.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/greedy/MeetingRooms.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/greedy/MeetingRooms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/hashing/AminusB$Solution.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/hashing/AminusB$Solution.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/hashing/AminusB.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/hashing/AminusB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/hashing/LongestConsecutiveSequence.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/hashing/LongestConsecutiveSequence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../interviewbit/target/classes/hashing/SubarrayWithSum0.class" beforeDir="false" afterPath="$PROJECT_DIR$/../interviewbit/target/classes/hashing/SubarrayWithSum0.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../leetcode/src/greedy/aditiconsulting.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1tRXuRpS87OB8rPdA2QGzCQVmJa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d7897af-e3a9-42a0-a222-aac85a9d17e8" name="Default Changelist" comment="" />
+      <created>1622733098098</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622733098098</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="384" y="116" key="SettingsEditor" timestamp="1622733121917">
+      <screen x="0" y="25" width="1792" height="1026" />
+    </state>
+    <state x="384" y="116" key="SettingsEditor/0.25.1792.1026@0.25.1792.1026" timestamp="1622733121917" />
+  </component>
+</project>
