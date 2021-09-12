@@ -1,7 +1,8 @@
 package divideandconquer;
 
 import java.util.Arrays;
-
+//Given an integer array nums and two integers lower and upper,
+// return the number of range sums that lie in [lower, upper] inclusive.
 public class CountRangeSum {
     public static int countRangeSum(int[] nums, int b, int c) {
         int[] sums = new int[nums.length + 1];

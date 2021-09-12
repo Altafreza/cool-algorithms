@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="codingbat" />
         <module name="cses" />
         <module name="hackerearth" />
         <module name="uva" />
         <module name="codingblocks" />
+        <module name="graph-algorithms" />
+        <module name="codingbat" />
         <module name="interviewbit" />
       </profile>
     </annotationProcessing>
@@ -18,6 +19,7 @@
       <module name="codingbat" target="7" />
       <module name="codingblocks" target="11" />
       <module name="cses" target="8" />
+      <module name="graph-algorithms" target="1.5" />
       <module name="hackerearth" target="1.5" />
       <module name="interviewbit" target="8" />
       <module name="leetcode-datastructures" target="11" />

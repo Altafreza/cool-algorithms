@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/uva/pom.xml" />
         <option value="$PROJECT_DIR$/cses/pom.xml" />
         <option value="$PROJECT_DIR$/hackerearth/pom.xml" />
+        <option value="$PROJECT_DIR$/graph-algorithms/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

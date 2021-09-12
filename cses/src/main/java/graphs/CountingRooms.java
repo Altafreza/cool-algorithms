@@ -1,8 +1,6 @@
 package graphs;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.util.StringTokenizer;
 
 //5 8
@@ -13,56 +11,11 @@ import java.util.StringTokenizer;
 //########
 public class CountingRooms {
     private static char[][] map;
-    private FastScanner in;
+    private static FastScanner in;
+    static int[][] dirs = new int[][]{{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
-    public static void main(String args[]) throws Exception {
-        /* Sample code to perform I/O:
-         * Use either of these methods for input
-
-        //BufferedReader
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String name = br.readLine();                // Reading input from STDIN
-        System.out.println("Hi, " + name + ".");    // Writing output to STDOUT
-        */
-        //Scanner
-        Scanner sc = new Scanner(System.in);
-        PrintWriter out = new PrintWriter(System.out);
-        int v = sc.nextInt(), e = sc.nextInt();
-        ArrayList<Integer>[] adj = (ArrayList<Integer>[]) new ArrayList[v];
-        for (int i = 0; i < v; i++) {
-            adj[i] = new ArrayList<Integer>();
-        }
-        for (int i = 0; i < e; i++) {
-            int x, y;
-            x = sc.nextInt();
-            y = sc.nextInt();
-            adj[x - 1].add(y - 1);
-            adj[y - 1].add(x - 1);
-        }
-        int count = 0;
-        boolean[] marked = new boolean[v + 1];
-        for (int i = 0; i < v; i++) {
-            if (!marked[i]) {
-                dfs(adj, marked, i);
-                count++;
-            }
-        }
-        out.println(count);
-        out.flush();
-        out.close();
-    }
-
-    private static void dfs(ArrayList<Integer>[] adj, boolean[] marked, int i) {
-        marked[i] = true;
-//        if (adj[i] != null)
-            for (int x : adj[i]) {
-                if (!marked[x]) {
-                    dfs(adj, marked, x);
-                }
-            }
-    }
-    /*public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
+    public static void main(String[] args) {
+        in = new FastScanner(System.in);
         PrintWriter out = new PrintWriter(System.out);
 
         int n = in.nextInt(), m = in.nextInt();
@@ -78,20 +31,36 @@ public class CountingRooms {
             out.println();
         }
 
-        countRooms(map);
+        out.println(countRooms(map));
 
         out.flush();
         out.close();
-    }*/
+    }
 
     private static int countRooms(char[][] map) {
         boolean[][] visited = new boolean[map.length][map[0].length];
+        int count = 0;
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[0].length; j++) {
-
+                if (map[i][j] == '.' && !visited[i][j]) {
+                    dfs(i, j, visited, map);
+                    count++;
+                }
             }
         }
-        return 0;
+        return count;
+    }
+
+    private static void dfs(int i, int j, boolean[][] visited, char[][] map) {
+        visited[i][j] = true;
+        for (int x = 0; x < dirs.length; x++) {
+            int a = i + dirs[x][0];
+            int b = j + dirs[x][1];
+            if (a >= map.length || b >= map[0].length || a < 0 || b < 0) continue;
+            if (map[a][b] == '.' && !visited[a][b]) {
+                dfs(a, b, visited, map);
+            }
+        }
     }
 
     static class FastScanner {
@@ -121,4 +90,7 @@ public class CountingRooms {
             return Integer.parseInt(next());
         }
     }
+
 }
+
+
