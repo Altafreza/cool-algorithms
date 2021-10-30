@@ -18,13 +18,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="algoexpert" target="11" />
+      <module name="algoexpert" target="1.5" />
       <module name="codingbat" target="7" />
       <module name="codingblocks" target="11" />
       <module name="cses" target="8" />
-      <module name="educative" target="11" />
-      <module name="graph-algorithms" target="11" />
-      <module name="hackerearth" target="11" />
+      <module name="educative" target="1.5" />
+      <module name="graph-algorithms" target="1.5" />
+      <module name="hackerearth" target="1.5" />
       <module name="interviewbit" target="8" />
       <module name="leetcode-datastructures" target="11" />
       <module name="uva" target="9" />
