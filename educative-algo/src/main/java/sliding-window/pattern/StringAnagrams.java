@@ -1,5 +1,4 @@
-package pattern;
-
+package sliding-window.pattern;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

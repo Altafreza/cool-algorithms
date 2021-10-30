@@ -1,4 +1,7 @@
-package substrings;
+ package sliding-LongestRepeatingCharacterReplacement.java
+         LongestSubarrayWithOnesafterReplacement.java
+         LongestSubstringAtmostKDistinctChars.java
+         NonRepeatingSubstring.javawindow.substrings;
 
 import java.util.Comparator;
 import java.util.HashMap;
