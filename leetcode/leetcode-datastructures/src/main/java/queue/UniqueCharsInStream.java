@@ -1,7 +1,9 @@
 package queue;
 
+import java.io.PrintWriter;
 import java.util.LinkedList;
 import java.util.Queue;
+import java.util.Scanner;
 
 /*
  * First non-repeating character in a stream of characters
@@ -11,11 +13,15 @@ import java.util.Queue;
  * then append '#' at the end of B.
  */
 public class UniqueCharsInStream {
-    public static String solve(String str) {
+
+
+    public static void main(String[] args) {
         Queue<Character> q = new LinkedList<>();
-        StringBuilder res = new StringBuilder("");
+        Scanner sc = new Scanner(System.in);
+        PrintWriter out = new PrintWriter(System.out);
         int[] cnt = new int[26];
-        for (char x : str.toCharArray()) {
+        char x = sc.next().charAt(0);
+        while (x != '.') {
             cnt[x - 'a']++;
 
             // no need to add dup char in queue if you have to remove it
@@ -28,14 +34,14 @@ public class UniqueCharsInStream {
                 q.remove();
             }
             if (!q.isEmpty()) // we have a uniq ele until this point in the stresm
-                res.append(q.peek());
+                out.println(q.peek());
             else
-                res.append("#");
-        }
-        return res.toString();
-    }
+                out.println("#");
+            out.flush();
 
-    public static void main(String[] args) {
-        System.out.println(solve("aabb"));
+            x = sc.next().charAt(0);
+
+        }
+        out.flush();
     }
 }

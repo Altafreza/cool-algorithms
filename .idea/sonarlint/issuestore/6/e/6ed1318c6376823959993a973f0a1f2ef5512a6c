@@ -1,0 +1,13 @@
+
+P
+java:S1854"5Remove this useless assignment to local variable "n".(®ÖÎ‚ùÿÿÿÿ
+P
+java:S1854"5Remove this useless assignment to local variable "j".(ç™‚ñüÿÿÿÿ
+:
+java:S1659"Declare "n" on a separate line.(®ÖÎ‚ùÿÿÿÿ
+S	java:S106	"9Replace this use of System.out or System.err by a logger.(½åç÷üÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Ê®ù‡
+A
+java:S1481"&Remove this unused "j" local variable.(ç™‚ñüÿÿÿÿ
+A
+java:S1481"&Remove this unused "n" local variable.(®ÖÎ‚ùÿÿÿÿ

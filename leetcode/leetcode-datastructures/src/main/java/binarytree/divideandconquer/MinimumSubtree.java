@@ -32,6 +32,7 @@ public class MinimumSubtree {
         return help(root).node;
     }
 
+    // post order
     private Result help(TreeNode root) {
         if (root == null)
             return new Result(null, Integer.MAX_VALUE, 0);

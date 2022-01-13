@@ -2,6 +2,7 @@ package dynamicprograming.matrix;
 
 public class TopDownRangeSumQuery2D {
     Integer[][] dp;
+
     public TopDownRangeSumQuery2D(int[][] matrix) {
         if (matrix == null
                 || matrix.length == 0

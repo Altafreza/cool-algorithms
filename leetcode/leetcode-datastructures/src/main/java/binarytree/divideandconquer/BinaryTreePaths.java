@@ -13,17 +13,21 @@ public class BinaryTreePaths {
         return res;
     }
 
+    // preorder traversal // top-down
     public void dfs(List<String> res, TreeNode root, String path) {
         if (root != null) {
             if (root.left == null && root.right == null) {
-                res.add(path + root.val);
+                res.add(path + root.val); // top down calculation
             } else {
+                //data will trickle down
                 dfs(res, root.left, path + root.val + "->");
                 dfs(res, root.right, path + root.val + "->");
             }
         }
     }
 
+
+    //post order traversal
     public List<String> binaryTreePathsDandC(TreeNode root) {
         List<String> paths = new ArrayList<>();
         if (root == null) return paths;
@@ -33,9 +37,13 @@ public class BinaryTreePaths {
             return paths;
         }
 
+        // paths from left subtree
         List<String> leftPaths = binaryTreePaths(root.left);
+        // paths from right subtree
         List<String> rightPaths = binaryTreePaths(root.right);
 
+        // self-work
+        // adding current to all paths
         for (String path : leftPaths) {
             paths.add(root.val + "->" + path);
         }

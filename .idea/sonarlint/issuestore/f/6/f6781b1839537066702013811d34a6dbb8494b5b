@@ -1,0 +1,11 @@
+
+`
+java:S2184%"ECast one of the operands of this subtraction operation to a "double".(ëÓ“£üÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é€±
+f	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎáÍ–
+o
+java:S3008"TRename this field "PRECISION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏŠ£‘ûÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ëÜ¥Ñ
+V	java:S125"<This block of commented-out lines of code should be removed.(ö¯—Ëúÿÿÿÿ
+S	java:S1060"9Replace this use of System.out or System.err by a logger.(ŞÙÜìüÿÿÿÿ
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(¹…ëçûÿÿÿÿ

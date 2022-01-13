@@ -34,6 +34,7 @@ public class KthSmallestElement {
         kthSmallest1(root.right, k, pq);
     }
 
+    // inorder traversal
     public int kthSmallest(TreeNode root, int k) {
         this.k = k;
         //return dfs(root);
@@ -50,6 +51,7 @@ public class KthSmallestElement {
         return dfs(root.right);
     }
 
+    // inorder traversal
     public void dfs2(TreeNode root) {
         if (root == null) return;
         dfs2(root.left);

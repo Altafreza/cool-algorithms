@@ -7,11 +7,14 @@ public class BalancedBinaryTree2 {
         return helper(root).isBalanced;
     }
 
+
+    //post order traversal
     private Node helper(TreeNode root) {
         if (root == null) return new Node(true, 0);
 
-        //Divide
+        //info from left subtree
         Node left = helper(root.left);
+        //info from right subtree || recursion fairy | induction
         Node right = helper(root.right);
 
         if (!left.isBalanced || !right.isBalanced) {

@@ -67,12 +67,6 @@ v
 Fleetcode/leetcode-datastructures/src/main/java/matrix/RotateImage.java,f\6\f67edb3f2864f0204920bea6fb7a233aa32af370
 _
 /codingbat/src/main/java/recursion1/StrDist.java,3\5\359b1145325e607f5c880290139c71f796bd732a
-T
-$codingbat/src/main/java/Logic_1.java,9\e\9e810314333a1a29fe78d5e89787436ef17735c6
-X
-(codingbat/src/main/java/Recursion_1.java,7\c\7c6824435cf2a2df2d08bbd56681a516563e2e34
-U
-%codingbat/src/main/java/String_1.java,9\2\92f0c9d39f3057063af2488e40de2cf7adf9a4d8
 k
 ;leetcode/src/backtracking/combinatorics/EqualPartition.java,1\d\1df1d7a44f59a81c9f4aaea073d02b933155b7a4
 ]
@@ -121,8 +115,6 @@ Wleetcode/leetcode-datastructures/src/main/java/binarytree/bfs/PopulateRightPoin
 Xleetcode/leetcode-datastructures/src/main/java/binarytree/bfs/PopulateRightPointer2.java,4\9\495de5e4684660c98420252d8555dcfba6841935
 }
 Mleetcode/leetcode-datastructures/src/main/java/binarytree/dfs/InvertTree.java,d\3\d3dcbd8a45229cf45b7cae5775d58cafc33be25b
-r
-Bleetcode/leetcode-datastructures/lld_interviews/lld_interviews.iml,6\b\6b30084b0ee7456df12c36b77fefcfacd7ce27ae
 e
 5leetcode/src/binarysearch/tree/CountCompleteTree.java,6\0\600b90155ac0208b0f2b2a2393b09254918c45b6
 è
@@ -189,8 +181,6 @@ cleetcode/leetcode-datastructures/src/main/java/binarytree/divideandconquer/Bala
 ,leetcode/src/binarysearch/FindDuplicate.java,e\a\eab6e6a400ae33ffbf31ce8bf9cd291dd845dd92
 Å
 Qleetcode/leetcode-datastructures/src/main/java/binarytree/EqualPartitionTree.java,5\c\5c6cf4a9e1e8fdaabbacdfb63965add66fc34283
-X
-(leetcode/src/greedy/aditiconsulting.java,b\b\bb35fce29a717123d6168c4b81dc05cfd96d38a4
 ;
 uva/pom.xml,7\1\717a64ea30d4e16e1b5050312ea869077c6181c8
 l
@@ -205,5 +195,21 @@ k
 ;codingblocks/src/main/java/graphs/bfs/SnakesAndLadders.java,d\7\d784c55ea35e06cb9a429f0e10436699d5f006fc
 Ç
 Rcodingblocks/src/main/java/mathematics/inclusion_exclusion/DivisibilityPrimes.java,1\c\1c2bce6f2fc8776a1c7f00c2d9ff6a5cd9b4d4ec
-{
-Kcodingblocks/src/main/java/mathematics/inclusion_exclusion/LowesRound1.java,1\7\174ce9e19ad636cc8e36dfa19798d441141af51d
+ç
+]educative/src/main/java/sliding_window/substring/LongestSubarrayWithOnesafterReplacement.java,b\8\b847e2f39200b803e191932db41fe8e12b13b0c2
+ä
+Zeducative/src/main/java/sliding_window/substring/LongestRepeatingCharacterReplacement.java,3\d\3dca89a1b9d2091626661baaec4091bf9ad69273
+a
+1leetcode/src/sliding_window/CountDuplicateII.java,f\0\f076cce5a13c8c6002a66dde6a9bb6187978a547
+X
+(codeforces/src/online_judge/Pangram.java,5\8\5832fbec1586c5ad829fefcad6ed1f9140a43908
+v
+Feducative/src/main/java/sliding_window/substring/FruitsIntoBasket.java,e\8\e8e301581b6092bc59e683ad78e9381b5a615231
+\
+,uva/src/main/java/online_judge/SubPrime.java,6\e\6ed1318c6376823959993a973f0a1f2ef5512a6c
+U
+%codeforces/src/online_judge/Hulk.java,4\3\43c069e95bdfed5e10264671875d65a369107e40
+Y
+)uva/src/main/java/binarysearch/kenny.java,0\c\0c0fd9de7bf30a4e0b5df85f46d7e755fdf7c96c
+Y
+)codeforces/src/online_judge/WetShark.java,f\6\f6781b1839537066702013811d34a6dbb8494b5b
