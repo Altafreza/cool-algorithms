@@ -3,7 +3,7 @@ package binarytree.dfs;
 import commons.TreeNode;
 
 public class LowestCommonAncestor {
-    // post order solution
+    // post order recursion // No helper
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         // 2 base cases
         if (root == null) return root;
@@ -14,7 +14,7 @@ public class LowestCommonAncestor {
         // find p or q in left subtree
         TreeNode right = lowestCommonAncestor(root.right, p, q);
 
-        // if both found in the current subtree root is the lca
+        // if both found in the current subtree || root is the lca
         if (left != null && right != null) return root;
 
         // either p or q found return the node p or q itself

@@ -1,7 +1,7 @@
 
+A
+java:S1481"&Remove this unused "n" local variable.(ìÊüÿÿÿÿ
 P
 java:S1854"5Remove this useless assignment to local variable "n".(ìÊüÿÿÿÿ
 S	java:S106
 "9Replace this use of System.out or System.err by a logger.(½åç÷üÿÿÿÿ
-A
-java:S1481"&Remove this unused "n" local variable.(ìÊüÿÿÿÿ

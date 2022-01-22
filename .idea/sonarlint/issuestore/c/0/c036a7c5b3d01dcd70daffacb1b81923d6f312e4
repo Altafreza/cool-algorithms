@@ -1,10 +1,10 @@
 
+Z	java:S106N"9Replace this use of System.out or System.err by a logger.(—Ü¥Ÿùÿÿÿÿ8Œ©šá®.
 ]	java:S125M"<This block of commented-out lines of code should be removed.(Î°Âˆúÿÿÿÿ8Œ©šá®.
 `
 java:S11249"EReorder the modifiers to comply with the Java Language Specification.(öÛè³ùÿÿÿÿ
-k	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±çƒüÿÿÿÿ
-Z	java:S106N"9Replace this use of System.out or System.err by a logger.(—Ü¥Ÿùÿÿÿÿ8Œ©šá®.
 [
 java:S1124."EReorder the modifiers to comply with the Java Language Specification.(ùŽ·Ã
 `
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ÈÑÁìÿÿÿÿÿ
+k	java:S117S"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±çƒüÿÿÿÿ

@@ -1,0 +1,10 @@
+
+X
+java:S1854"6Remove this useless assignment to local variable "sc".(נÛ²¸רÿÿÿÿ8´‘גüד/
+J
+java:S1481	"(Remove this unused "out" local variable.(½וחקüÿÿÿÿ8´‘גüד/
+Y
+java:S1854	"7Remove this useless assignment to local variable "out".(½וחקüÿÿÿÿ8´‘גüד/
+Z	java:S106	"9Replace this use of System.out or System.err by a logger.(½וחקüÿÿÿÿ8´‘גüד/
+I
+java:S1481"'Remove this unused "sc" local variable.(נÛ²¸רÿÿÿÿ8´‘גüד/

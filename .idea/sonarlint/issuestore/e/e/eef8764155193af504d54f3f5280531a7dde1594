@@ -1,12 +1,12 @@
 
->
-java:S1125O"(Remove the literal "true" boolean value.(Ó³ëý
 Q	java:S125"<This block of commented-out lines of code should be removed.(¶³ü½
-S	java:S106"9Replace this use of System.out or System.err by a logger.(Åò…íýÿÿÿÿ
 o
 java:S1488"YImmediately return this expression instead of assigning it to the temporary variable "b".(—íâ
+>
+java:S1125O"(Remove the literal "true" boolean value.(Ó³ëý
+Q	java:S125	"<This block of commented-out lines of code should be removed.(ë÷„Ñ
 M
 java:S1144"0Remove this unused private "isSubsetSum" method.(ÿ‡µ¯8‹¿îÊ•.
 Z
 java:S1197"8Move the array designator from the variable to the type.(®’¹žùÿÿÿÿ8™¶ƒ˜£.
-Q	java:S125	"<This block of commented-out lines of code should be removed.(ë÷„Ñ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(Åò…íýÿÿÿÿ

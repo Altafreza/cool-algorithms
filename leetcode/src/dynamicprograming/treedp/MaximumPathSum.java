@@ -31,6 +31,7 @@ public class MaximumPathSum {
         }
     }
 
+    // 2nd solution
     public int maxPathSum2(TreeNode root) {
         maxRes = Integer.MIN_VALUE;
         maxSumPathMain(root);
@@ -38,7 +39,7 @@ public class MaximumPathSum {
     }
 
     public int maxSumPathMain(TreeNode root) {
-        if (root == null) return 0;
+        if (root == null) return 0; //base case
         int leftSum = maxSumPathMain(root.left);
         int rightSum = maxSumPathMain(root.right);
         int c0 = root.val;

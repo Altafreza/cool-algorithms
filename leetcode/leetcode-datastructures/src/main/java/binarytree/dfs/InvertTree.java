@@ -10,10 +10,27 @@ import java.util.List;
 
 public class InvertTree {
     public static void main(String[] args) {
-        TreeNode treeNode = TreeUtils.constructBinaryTree(Arrays.asList(new Integer[]{4, 2, 7, 1, 3, 6, 9}));
+        TreeNode treeNode = TreeUtils.constructBinaryTree(Arrays.asList(4, 2, 7, 1, 3, 6, 9));
         postOrdIter(treeNode);
         List<Integer> list = TreeUtils.printLevelOrder(treeNode);
         System.out.println(list);
+    }
+
+    // post order recursion // no helper
+    public static TreeNode invertTree1(TreeNode root) {
+        if (root == null) return root;
+
+        // inverted right sub tree built
+        TreeNode left = invertTree1(root.right);
+        // inverted left sub tree built
+        TreeNode right = invertTree1(root.left);
+
+        // upon return from recursion
+        // invert oneself
+        root.left = left;
+        root.right = right;
+        // return root
+        return root;
     }
 
     public static TreeNode postOrdIter(TreeNode root) {
@@ -40,7 +57,7 @@ public class InvertTree {
         return root;
     }
 
-    // post order recursive
+    // post order recursion
     public static TreeNode invertTree(TreeNode root) {
         if (root == null) return root;
 
@@ -49,22 +66,14 @@ public class InvertTree {
         root.right = invertTree(temp);
         return root;
     }
-    // post order recursive
-    public static TreeNode invertTree1(TreeNode root) {
-        if (root == null) return root;
-
-        TreeNode left = invertTree1(root.right);
-        TreeNode right = invertTree1(root.left);
-
-        root.left = left;
-        root.right = right;
-        return root;
-    }
 
     // preorder traversal
     public static void preOrderRec(TreeNode root) {
-        if (root == null || (root.right == null && root.left == null)) return;
+        if (root == null || (root.right == null && root.left == null)) return; //base case
+
+        // pre-order work
         if (root.right != null && root.left != null) {
+            // swapp nodes
             TreeNode node = root.right;
             root.right = root.left;
             root.left = node;
@@ -75,10 +84,13 @@ public class InvertTree {
             root.left = root.right;
             root.right = null;
         }
+        // invert left subtree
         preOrderRec(root.left);
+        // invert right subtree
         preOrderRec(root.right);
     }
 
+    // same as below // no difference
     public TreeNode preorderIterative1(TreeNode root) {
         Deque<TreeNode> s = new ArrayDeque<>();
         if (root == null) return root;
@@ -110,8 +122,7 @@ public class InvertTree {
         // recursively also the program ends when the recusion stack is fully unwinded
         // in other words it is fully empty
         while (!s.isEmpty()) {
-            // in recursion the root is updated in each recursive call
-            // the unwinding(bottom up) happens from the leaf nodes
+
             // therefore to simulate that all the nodes should be in the stack
             // and in the same manner as recursion
             // the right subtree is first dealt with and then left subtree
@@ -122,7 +133,7 @@ public class InvertTree {
             if (root.right != null) s.push(root.right);
 
             // SELF - WORK
-            // but unlike recursion things are done top down(meaning self-work)
+            //pre order work
             // but the nodes are dealt with in a dfs/recursion manner
             TreeNode temp = root.left;
             root.left = root.right;

@@ -1,10 +1,10 @@
 
->
-java:S14810"(Remove this unused "res" local variable.(ýœºë
-V	java:S125"<This block of commented-out lines of code should be removed.(ý‹ŒÇüÿÿÿÿ
-b
-java:S1124?"EReorder the modifiers to comply with the Java Language Specification.(ýÊ¸Æ8á©šá®.
 ]	java:S125A"<This block of commented-out lines of code should be removed.(òì”®þÿÿÿÿ8á©šá®.
+Z	java:S106<"9Replace this use of System.out or System.err by a logger.(ìŸö—ùÿÿÿÿ8á©šá®.
 [
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(ó¼·«
-Z	java:S106<"9Replace this use of System.out or System.err by a logger.(ìŸö—ùÿÿÿÿ8á©šá®.
+V	java:S125"<This block of commented-out lines of code should be removed.(ý‹ŒÇüÿÿÿÿ
+>
+java:S14810"(Remove this unused "res" local variable.(ýœºë
+b
+java:S1124?"EReorder the modifiers to comply with the Java Language Specification.(ýÊ¸Æ8á©šá®.

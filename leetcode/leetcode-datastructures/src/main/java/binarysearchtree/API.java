@@ -16,6 +16,32 @@ public class API {
         return root;
     }
 
+    public TreeNode insertIntoBSTPreorder(TreeNode root, int val) {
+        if (root == null) return new TreeNode(val);
+        helper(root, val);
+        return root;
+    }
+
+    private void helper(TreeNode root, int val) {
+        // base case 1
+        if (root.right == null && val > root.val) {
+            root.right = new TreeNode(val);
+            return;
+        }
+        // base case 2
+        if (root.left == null && val < root.val) {
+            root.left = new TreeNode(val);
+            return;
+        }
+
+        // recursive case
+        if (val > root.val) {
+            helper(root.right, val);
+        } else {
+            helper(root.left, val);
+        }
+    }
+
     public TreeNode deleteNode(TreeNode root, int key) {
         if (root == null) return root;
 

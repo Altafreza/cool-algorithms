@@ -1,0 +1,11 @@
+
+A
+java:S1481"&Remove this unused "n" local variable.(å¢ÏÌþÿÿÿÿ
+J
+java:S10664"/Merge this if statement with the enclosing one.( «©¥üÿÿÿÿ
+P
+java:S1854"5Remove this useless assignment to local variable "n".(å¢ÏÌþÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(î¯…øøÿÿÿÿ
+?
+java:S5413")Verify that "remove()" is used correctly.(ôêÍ
+S	java:S106A"9Replace this use of System.out or System.err by a logger.(àÂ¼þÿÿÿÿ

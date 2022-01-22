@@ -1,8 +1,24 @@
 
+S	java:S106>"9Replace this use of System.out or System.err by a logger.(şÖ½ıÿÿÿÿ
 A
 java:S1168"+Return an empty collection instead of null.(¥¹ï
-S	java:S106>"9Replace this use of System.out or System.err by a logger.(şÖ½ıÿÿÿÿ
 N	java:S106@"9Replace this use of System.out or System.err by a logger.(ğş©
 N	java:S106B"9Replace this use of System.out or System.err by a logger.(–Üë¯
-N	java:S106E"9Replace this use of System.out or System.err by a logger.(Õâ¢¢
 S	java:S106H"9Replace this use of System.out or System.err by a logger.(Ïä‚õøÿÿÿÿ
+N	java:S106E"9Replace this use of System.out or System.err by a logger.(Õâ¢¢
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ºúğ8—Ê‚ùå/
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ºúğ8—Ê‚ùå/
+v
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(õ’¯ı8—Ê‚ùå/
+{
+java:S2293?"YReplace the type specification in this constructor call with the diamond operator ("<>").(¯îÃîøÿÿÿÿ8—Ê‚ùå/
+{
+java:S2293A"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ï•œ‹üÿÿÿÿ8—Ê‚ùå/
+v
+java:S2293C"YReplace the type specification in this constructor call with the diamond operator ("<>").(˜…ÿ8—Ê‚ùå/
+v
+java:S2293F"YReplace the type specification in this constructor call with the diamond operator ("<>").(ò“İí8—Ê‚ùå/
+v
+java:S2293I"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñ¦Úí8—Ê‚ùå/

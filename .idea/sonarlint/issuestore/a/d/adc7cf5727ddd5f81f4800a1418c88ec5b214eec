@@ -1,19 +1,23 @@
 
-`
-java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µ¦…Êýÿÿÿÿ
-V	java:S125"<This block of commented-out lines of code should be removed.(ý¹ª°þÿÿÿÿ
-N	java:S106B"9Replace this use of System.out or System.err by a logger.(®ä§§
-D
-java:S5413")Verify that "remove()" is used correctly.(þÌÁÊÿÿÿÿÿ
 [
 java:S11241"EReorder the modifiers to comply with the Java Language Specification.(·«¹
 P
 java:S1854
 "5Remove this useless assignment to local variable "n".(à„¸šüÿÿÿÿ
-[
-java:S1124 "EReorder the modifiers to comply with the Java Language Specification.(«µ™ß
+V	java:S125"<This block of commented-out lines of code should be removed.(ý¹ª°þÿÿÿÿ
 [
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(úÅ·¹
+N	java:S106B"9Replace this use of System.out or System.err by a logger.(®ä§§
+`
+java:S1124"EReorder the modifiers to comply with the Java Language Specification.(µ¦…Êýÿÿÿÿ
 A
 java:S1481
 "&Remove this unused "n" local variable.(à„¸šüÿÿÿÿ
+D
+java:S5413")Verify that "remove()" is used correctly.(þÌÁÊÿÿÿÿÿ
+[
+java:S1124 "EReorder the modifiers to comply with the Java Language Specification.(«µ™ß
+v
+java:S2293""YReplace the type specification in this constructor call with the diamond operator ("<>").(÷Ù³Î8‰¯Ýøå/
+v
+java:S22933"YReplace the type specification in this constructor call with the diamond operator ("<>").(÷Ù³Î8‰¯Ýøå/

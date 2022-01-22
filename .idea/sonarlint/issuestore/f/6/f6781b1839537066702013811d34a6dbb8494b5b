@@ -1,11 +1,19 @@
 
 `
-java:S2184%"ECast one of the operands of this subtraction operation to a "double".(ëÓ“£üÿÿÿÿ
-f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é€±
-f	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎáÍ–
+java:S2184("ECast one of the operands of this subtraction operation to a "double".(ëÓ“£üÿÿÿÿ
 o
-java:S3008"TRename this field "PRECISION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏŠ£‘ûÿÿÿÿ
-N	java:S106"9Replace this use of System.out or System.err by a logger.(ëÜ¥Ñ
-V	java:S125"<This block of commented-out lines of code should be removed.(ö¯—Ëúÿÿÿÿ
-S	java:S1060"9Replace this use of System.out or System.err by a logger.(ŞÙÜìüÿÿÿÿ
-S	java:S1063"9Replace this use of System.out or System.err by a logger.(¹…ëçûÿÿÿÿ
+java:S3008"TRename this field "PRECISION" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÏŠ£‘ûÿÿÿÿ
+C
+java:S1481"&Remove this unused "a" local variable.(îÁ²‰8öåÚùã/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(½åç÷üÿÿÿÿ8öåÚùã/
+S	java:S1063"9Replace this use of System.out or System.err by a logger.(ŞÙÜìüÿÿÿÿ
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(é€±
+F
+java:S1144")Remove this unused private "sqrt" method.(é€±8ÔûÚùã/
+R
+java:S1854"5Remove this useless assignment to local variable "a".(îÁ²‰8öåÚùã/
+W	java:S125"<This block of commented-out lines of code should be removed.(¼¥¨-8ÔûÚùã/
+f	java:S117/"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÎáÍ–
+S	java:S1066"9Replace this use of System.out or System.err by a logger.(¹…ëçûÿÿÿÿ
+>
+java:S1659"!Declare "odd" on a separate line.(ºÇƒî8öåÚùã/

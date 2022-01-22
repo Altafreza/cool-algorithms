@@ -19,12 +19,14 @@ public class DeleteNodeAndReturnForests {
         return heads;
     }
 
+    // preorder
     private boolean dfs(TreeNode node, boolean head) {
-        if (node == null) return false;
-        boolean del = set.contains(node.val);
+        if (node == null) return false; // base case
+        boolean del = set.contains(node.val); // check curr node to be deleted
         if (head && !del) {
             heads.add(node);
         }
+
         if (dfs(node.left, del)) node.left = null;
         if (dfs(node.right, del)) node.right = null;
         return del;

@@ -1,0 +1,18 @@
+
+S
+java:S38781"8Remove this array creation and simply pass the elements.(ª®–Ùýÿÿÿÿ
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ï‹³Ž
+P
+java:S14814"5Remove this unused "zigzagLevelOrder" local variable.(½òÔßøÿÿÿÿ
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(½áØÔùÿÿÿÿ
+V	java:S1252"<This block of commented-out lines of code should be removed.(€ÛÑ¥ûÿÿÿÿ
+_
+java:S18544"DRemove this useless assignment to local variable "zigzagLevelOrder".(½òÔßøÿÿÿÿ
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(©¹×Å
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(°ÛÊå
+o
+java:S2293&"YReplace the type specification in this constructor call with the diamond operator ("<>").(”øêè

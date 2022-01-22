@@ -1,19 +1,31 @@
 
-Š
-java:S1319"oThe type of the "dict" object should be an interface such as "List" rather than the implementation "ArrayList".(¡çßœúÿÿÿÿ
+B
+java:S1481Q"'Remove this unused "dp" local variable.(¹ã¸üûÿÿÿÿ
+P	java:S125R"<This block of commented-out lines of code should be removed.(œßÕ_
 ‡
 java:S1319"lThe type of the "dict" object should be an interface such as "Set" rather than the implementation "HashSet".(¢É»ªıÿÿÿÿ
+O	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(Õâ¢¢
+Š
+java:S1319"oThe type of the "dict" object should be an interface such as "List" rather than the implementation "ArrayList".(¡çßœúÿÿÿÿ
 …
 java:S1319f"jThe type of the "dp" object should be an interface such as "Map" rather than the implementation "HashMap".(ÉÁëòúÿÿÿÿ
-Q
-java:S1854Q"6Remove this useless assignment to local variable "dp".(¹ã¸üûÿÿÿÿ
+Q	java:S125	"<This block of commented-out lines of code should be removed.(±œĞ’
 t
 java:S2293Q"YReplace the type specification in this constructor call with the diamond operator ("<>").(¹ã¸üûÿÿÿÿ
 N	java:S106~"9Replace this use of System.out or System.err by a logger.(ğş©
 O	java:S106€"9Replace this use of System.out or System.err by a logger.(–Üë¯
-O	java:S106ƒ"9Replace this use of System.out or System.err by a logger.(Õâ¢¢
 T	java:S106†"9Replace this use of System.out or System.err by a logger.(Ïä‚õøÿÿÿÿ
-B
-java:S1481Q"'Remove this unused "dp" local variable.(¹ã¸üûÿÿÿÿ
-Q	java:S125	"<This block of commented-out lines of code should be removed.(±œĞ’
-P	java:S125R"<This block of commented-out lines of code should be removed.(œßÕ_
+Q
+java:S1854Q"6Remove this useless assignment to local variable "dp".(¹ã¸üûÿÿÿÿ
+Q
+java:S3740P"/Provide the parametrized type for this generic.(­¹ÜÛıÿÿÿÿ8µ’ƒùå/
+v
+java:S2293#"YReplace the type specification in this constructor call with the diamond operator ("<>").(¬ˆÈ²8µ’ƒùå/
+{
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ï•œ‹üÿÿÿÿ8µ’ƒùå/
+w
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(˜…ÿ8µ’ƒùå/
+w
+java:S2293„"YReplace the type specification in this constructor call with the diamond operator ("<>").(ò“İí8µ’ƒùå/
+w
+java:S2293‡"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñ¦Úí8µ’ƒùå/
