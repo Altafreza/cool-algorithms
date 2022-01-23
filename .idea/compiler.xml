@@ -6,15 +6,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="codingbat" />
-        <module name="uva" />
-        <module name="educative" />
         <module name="cses" />
-        <module name="algoexpert" />
-        <module name="codingblocks" />
-        <module name="interviewbit" />
-        <module name="graph-algorithms" />
         <module name="hackerearth" />
+        <module name="uva" />
+        <module name="codingblocks" />
+        <module name="educative" />
+        <module name="graph-algorithms" />
+        <module name="algoexpert" />
+        <module name="codingbat" />
+        <module name="interviewbit" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
