@@ -19,8 +19,7 @@ public class LargestBSTSize {
     }
 
     // Recursive function to find the size of the largest BST in a given binary tree
-    public static SubTreeInfo findLargestBST(TreeNode root) {
-        // Base case: empty tree
+    public static SubTreeInfo findLargestBST(TreeNode root) {// Base case: empty tree
         if (root == null) {
             return new SubTreeInfo(Integer.MAX_VALUE, Integer.MIN_VALUE, 0, true);
         }

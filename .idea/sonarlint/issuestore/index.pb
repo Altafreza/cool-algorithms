@@ -317,3 +317,5 @@ U
 %leetcode/src/binarysearch/FunFin.java,4\9\491b770781abb0a0105b4d0e641263a763530792
 ƒ
 Sleetcode/leetcode-datastructures/src/main/java/binarysearchtree/LargestBSTSize.java,c\1\c17e0454f7e1a7ab72dca07193cdd2e9a97376a1
+q
+Aleetcode/src/graphs/connected_components/CriticalConnections.java,c\f\cf2114bb2e54fd5d36effb842d4ff74d045f3349
