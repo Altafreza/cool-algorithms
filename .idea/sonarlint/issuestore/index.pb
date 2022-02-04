@@ -319,3 +319,15 @@ U
 Sleetcode/leetcode-datastructures/src/main/java/binarysearchtree/LargestBSTSize.java,c\1\c17e0454f7e1a7ab72dca07193cdd2e9a97376a1
 q
 Aleetcode/src/graphs/connected_components/CriticalConnections.java,c\f\cf2114bb2e54fd5d36effb842d4ff74d045f3349
+p
+@leetcode/src/divideandconquer/quickselect/KthLargestElement.java,6\f\6f37d3d947088d6e016b497e688ec76050ae1c0f
+s
+Cleetcode/src/divideandconquer/quickselect/TopKFrequentElements.java,9\e\9e32d9a5c6ade0f43dddb3f4824d0daf2527fa1b
+n
+>leetcode/src/divideandconquer/quickselect/MajorityElement.java,3\d\3dfab75e710e816f5396d2e6463d6f488ab50250
+o
+?leetcode/src/dynamicprograming/onedee/BestTimeToSellStocks.java,e\c\ecd87924a11468bf29dfd01e2d18dfc9d517430a
+j
+:educative/src/main/java/two_pointer/DutchNationalFlag.java,e\6\e639ff41c84399ffc8244c9ec07f81cf7380bfbe
+V
+&codeforces/src/datastructure/MAin.java,9\c\9c2dffc22520d3ece8b42bb8d528b90986687e2c

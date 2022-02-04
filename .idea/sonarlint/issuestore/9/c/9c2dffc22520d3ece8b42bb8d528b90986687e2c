@@ -1,0 +1,16 @@
+
+Œ
+java:S1319"wThe type of the "sortedMap" object should be an interface such as "SortedMap" rather than the implementation "TreeMap".(ÎóÉ
+
+java:S1319*"sThe return type of this method should be an interface such as "SortedMap" rather than the implementation "TreeMap".(ú°•˜ùÿÿÿÿ
+>
+java:S1604+"(Make this anonymous inner class a lambda(Ä±ÇÛ
+M
+java:S3655"7Call "Optional#isPresent()" before accessing the value.(š©İ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ğùèå
+M
+java:S1854"7Remove this useless assignment to local variable "max".(š©İ
+o
+java:S2293+"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ä±ÇÛ
+>
+java:S1481"(Remove this unused "max" local variable.(š©İ

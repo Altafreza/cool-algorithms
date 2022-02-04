@@ -1,0 +1,12 @@
+
+N	java:S106
+"9Replace this use of System.out or System.err by a logger.(¡ìÁÓ
+S
+java:S1854'"8Remove this useless assignment to local variable "rand".(šŸ«íøÿÿÿÿ
+:
+java:S1659-"Declare "j" on a separate line.(¢€ŒŞúÿÿÿÿ
+9
+java:S2119'"Save and re-use this "Random".(šŸ«íøÿÿÿÿ
+V	java:S125)"<This block of commented-out lines of code should be removed.(ÕĞË‚ûÿÿÿÿ
+D
+java:S1481'")Remove this unused "rand" local variable.(šŸ«íøÿÿÿÿ

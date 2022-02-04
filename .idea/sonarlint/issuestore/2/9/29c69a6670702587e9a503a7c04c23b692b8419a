@@ -1,0 +1,22 @@
+
+b	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(Ù†òç
+V	java:S125	"<This block of commented-out lines of code should be removed.(‰Ù»žþÿÿÿÿ
+S	java:S106"9Replace this use of System.out or System.err by a logger.(÷ÅóÛùÿÿÿÿ
+Q	java:S125"<This block of commented-out lines of code should be removed.(²‹êå
+V	java:S125"<This block of commented-out lines of code should be removed.(ŒÄ¿ïùÿÿÿÿ
+C
+java:S1172"(Remove this unused method parameter "n".(Òž¡íøÿÿÿÿ
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(±§’†úÿÿÿÿ
+S	java:S106-"9Replace this use of System.out or System.err by a logger.(µŸÞ…þÿÿÿÿ
+S	java:S106/"9Replace this use of System.out or System.err by a logger.(ÊËÓùþÿÿÿÿ
+S	java:S1061"9Replace this use of System.out or System.err by a logger.(÷î‡±øÿÿÿÿ
+;
+java:S16595" Declare "hi" on a separate line.(ìð™Âüÿÿÿÿ
+N	java:S106L"9Replace this use of System.out or System.err by a logger.(¢ÒÎ–
+S	java:S106R"9Replace this use of System.out or System.err by a logger.(ôÄ¥Ëùÿÿÿÿ
+S	java:S106T"9Replace this use of System.out or System.err by a logger.(Ê˜¾Íúÿÿÿÿ
+K
+java:S1144"0Remove this unused private "primeUptill" method.(Òž¡íøÿÿÿÿ
+J
+java:S1144C"4Remove this unused private "convertdectobin" method.(°ŠÑ¥

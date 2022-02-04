@@ -2,7 +2,8 @@ package two_pointer;
 
 public class RemoveDuplicates {
     public static int remove(int[] num) {
-        int nextNonDuplicate = 1;
+        int nextNonDuplicate = 1; // duplicates are poushed towards the
+        // start of the array
         for (int i = 1; i < num.length; i++) {
             if (num[i] != num[nextNonDuplicate - 1]) {
                 num[nextNonDuplicate] = num[i];
