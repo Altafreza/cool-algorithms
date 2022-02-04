@@ -12,7 +12,7 @@ public class LongestIncreasingSubsequence {
         return 0;
     }
 
-    // for loop recurrence
+    // for loop recurrence only with 1 state
     private static int helper(int[] a, int prev, int[] memo) {
         int prevEle = 0;
         if (prev == -1)
@@ -34,7 +34,8 @@ public class LongestIncreasingSubsequence {
     }
 
     // 2^n without memo because its like combination sum
-    // you either take it or you dont the curr idx
+    // you either take the curr idx or not
+    // there are 2 state variables
     private static int helper(int[] a, int prev, int curr, int[][] dp) {
         // dp[i][j] represents lis is starting from j(curr) idx
         // with i as prev indx
@@ -67,6 +68,7 @@ public class LongestIncreasingSubsequence {
 
     }
 
+    // bottom-up
     private static int helper1(int[] a, int curr, int[] dp) {
         int res = 0; // base case
         int cEl = 0;
@@ -82,10 +84,7 @@ public class LongestIncreasingSubsequence {
         return res;
     }
 
-    /**
-     * @param a
-     * @return
-     */
+    // bottom up
     public int helper(final int[] a) {
         int[] dp = new int[a.length]; // same as len of array
         if (a.length == 0)

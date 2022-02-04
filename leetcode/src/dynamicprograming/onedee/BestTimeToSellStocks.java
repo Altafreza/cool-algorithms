@@ -2,6 +2,25 @@ package dynamicprograming.onedee;
 
 public class BestTimeToSellStocks {
 
+    // Two-pointer O(n)
+    public int maxProfitA(int[] a) {
+        int max = Integer.MIN_VALUE;
+        int i = 0, j = i + 1;
+        while (i < a.length && j < a.length) {
+            if (a[i] > a[j]) {
+                i = j;
+                j = 1 + i;
+                continue;
+            } else {
+                max = Math.max(max, a[j] - a[i]);
+                j++;
+            }
+        }
+
+        return max == Integer.MIN_VALUE ? 0 : max;
+    }
+
+    // recursive o(n)
     public int maxProfit(int[] prices) {
         return dfs(prices, 0, Integer.MAX_VALUE);
     }

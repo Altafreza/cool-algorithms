@@ -2,8 +2,10 @@ package dynamicprograming.subsetdp;
 
 public class SubsetSum {
     public static void main(String[] args) {
-        System.out.println(canPartition(new int[]{3, 2, 7}, 6));
+        System.out.println(canPartition(new int[]{3, 2, 7}, 6)); //false
+        System.out.println(canPartition(new int[]{3, 3, 7}, 6)); //true
     }
+
 
     /*
      * f(nums, i, x) = for all j != i and j > i {f(nums, j, x - nums[i])}

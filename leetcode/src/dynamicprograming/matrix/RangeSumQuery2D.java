@@ -6,7 +6,9 @@ public class RangeSumQuery2D {
     // dp like min sum path prefix sum is stored
     public RangeSumQuery2D(int[][] matrix) {
         if (matrix.length == 0 || matrix[0].length == 0) return;
+
         dp = new int[matrix.length][matrix[0].length + 1];
+
         for (int r = 0; r < matrix.length; r++) {
             for (int c = 0; c < matrix[0].length; c++) {
                 dp[r][c + 1] = dp[r][c] + matrix[r][c];
