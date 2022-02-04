@@ -13,10 +13,12 @@ public class KthSmallestElement {
 
     public static void main(String[] args) {
         TreeNode root = TreeUtils.constructBinaryTree(Arrays.asList(new Integer[]{3, 1, 4, null, 2}));
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> (b - a));
+        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> (b - a)); // max heap
+
+        new KthSmallestElement().kthSmallest(root, 2);
 
         new KthSmallestElement().kthSmallest1(root, 2, pq);
-        System.out.println(pq.poll());
+        System.out.println(pq.poll()); // kth largest element
     }
 
     /*

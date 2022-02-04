@@ -2,6 +2,8 @@ package binarysearchtree;
 
 import commons.TreeNode;
 
+// minimum height bst construction
+// height balanced ==> (height diff <= 1)
 public class ConvertSortedArrayToBST {
     public TreeNode sortedArrayToBST(int[] nums) {
         return helper(nums, 0, nums.length - 1);

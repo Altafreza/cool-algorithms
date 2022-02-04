@@ -71,7 +71,7 @@ public class API {
         return minv;
     }
 
-    class BSTIterator {
+    static class BSTIterator {
         TreeNode root;
         Stack<TreeNode> s;
 

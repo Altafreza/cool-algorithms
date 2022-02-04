@@ -1,6 +1,31 @@
 package binarytree.bfs;
 
+// for any binary tree
 public class PopulateRightPointer2 {
+    // recursive solution
+    public static Node rightSiblingTree(Node root) {
+        rightSiblingTree(root, null, false);
+        return root;
+    }
+
+    // inorder traversal
+    private static void rightSiblingTree(Node node, Node parent, boolean isLeftChild) {
+        if (node == null) return;
+
+        Node left = node.left, right = node.right;
+
+        rightSiblingTree(left, node, true);
+
+        if (parent == null) node.right = null;
+        else {
+            if (isLeftChild) node.right = parent.right;
+            else if (parent.right == null) node.right = null;
+            else node.right = parent.right.left;
+        }
+
+        rightSiblingTree(right, parent, false);
+    }
+
     public Node connect1(Node root) {
         // init row var
         Node temp = root; // since root is to be returned
@@ -73,5 +98,23 @@ public class PopulateRightPointer2 {
             prev = null;
         }
         return root;
+    }
+
+    class Node {
+        public int val;
+        public Node left;
+        public Node right;
+        public Node next;
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, Node _left, Node _right, Node _next) {
+            val = _val;
+            left = _left;
+            right = _right;
+            next = _next;
+        }
     }
 }

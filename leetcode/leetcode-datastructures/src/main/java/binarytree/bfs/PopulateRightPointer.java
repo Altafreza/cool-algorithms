@@ -5,6 +5,8 @@ import java.util.Deque;
 
 // This is for perfect binary tree
 public class PopulateRightPointer {
+
+
     // O(1) space
     public Node connect(Node root) {
         // init row var
@@ -46,22 +48,23 @@ public class PopulateRightPointer {
 
         return root;
     }
+
+    class Node {
+        public int val;
+        public Node left;
+        public Node right;
+        public Node next;
+
+        public Node(int _val) {
+            val = _val;
+        }
+
+        public Node(int _val, Node _left, Node _right, Node _next) {
+            val = _val;
+            left = _left;
+            right = _right;
+            next = _next;
+        }
+    }
 }
 
-class Node {
-    public int val;
-    public Node left;
-    public Node right;
-    public Node next;
-
-    public Node(int _val) {
-        val = _val;
-    }
-
-    public Node(int _val, Node _left, Node _right, Node _next) {
-        val = _val;
-        left = _left;
-        right = _right;
-        next = _next;
-    }
-}

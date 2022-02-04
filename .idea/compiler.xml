@@ -6,25 +6,25 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="cses" />
-        <module name="hackerearth" />
-        <module name="uva" />
-        <module name="codingblocks" />
-        <module name="educative" />
-        <module name="graph-algorithms" />
-        <module name="algoexpert" />
         <module name="codingbat" />
+        <module name="uva" />
+        <module name="educative" />
+        <module name="cses" />
+        <module name="algoexpert" />
+        <module name="codingblocks" />
         <module name="interviewbit" />
+        <module name="graph-algorithms" />
+        <module name="hackerearth" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="algoexpert" target="1.5" />
+      <module name="algoexpert" target="11" />
       <module name="codingbat" target="7" />
       <module name="codingblocks" target="11" />
       <module name="cses" target="8" />
       <module name="educative" target="8" />
-      <module name="graph-algorithms" target="1.5" />
-      <module name="hackerearth" target="1.5" />
+      <module name="graph-algorithms" target="11" />
+      <module name="hackerearth" target="11" />
       <module name="interviewbit" target="8" />
       <module name="leetcode-datastructures" target="11" />
       <module name="uva" target="9" />
