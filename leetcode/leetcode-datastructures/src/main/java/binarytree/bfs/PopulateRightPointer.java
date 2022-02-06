@@ -6,7 +6,32 @@ import java.util.Deque;
 // This is for perfect binary tree
 public class PopulateRightPointer {
 
+    // inorder recursive
+    public  Node connectInorder(Node root) {
+        rightSiblingTree(root, null, false);
+        return root;
+    }
 
+    // inorder traversal
+    private  void rightSiblingTree(Node node, Node parent, boolean isLeftChild) {
+        if (node == null) return;
+
+        Node left = node.left, right = node.right;
+
+        rightSiblingTree(left, node, true);
+
+        // I am done with my left subtree
+        // now dealing with myself
+        if (parent == null) node.next = null;
+        else  if (isLeftChild) node.next = parent.right;
+        else{ // if this node is a right child
+            if (parent.next == null) node.next = null; //for right children special case
+            else node.next = parent.next.left; // my parent is done because of inorder
+            // because parent is inorder predecessor
+
+        }
+        rightSiblingTree(right, node, false);
+    }
     // O(1) space
     public Node connect(Node root) {
         // init row var
