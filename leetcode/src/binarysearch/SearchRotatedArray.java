@@ -34,4 +34,31 @@ public class SearchRotatedArray {
         }
         return -1;
     }
+
+    public static int searchRotated(int[] a, int key) {
+        return helper(a, 0, a.length - 1, key);
+
+    }
+
+    private static int helper(int[] a, int i, int j, int key) {
+        if (i > j) return -1;
+
+        int mid = (i + j) / 2;
+
+        if (key == a[mid]) {
+            int temp = helper(a, i, mid - 1, key);
+            if (temp != -1)
+                return temp;
+            return mid;
+        }
+
+        if (a[i] <= a[mid]) {
+            if (key <= a[mid] && key >= a[i]) return helper(a, i, mid - 1, key);
+            else return helper(a, mid + 1, j, key);
+        } else {
+            if (key >= a[mid] && key <= a[j]) return helper(a, mid + 1, j, key);
+            else return helper(a, i, mid - 1, key);
+        }
+
+    }
 }
