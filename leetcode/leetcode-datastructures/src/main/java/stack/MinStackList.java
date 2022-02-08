@@ -19,6 +19,7 @@ class MinStackList {
     public void push(int x) {
         if (stack.isEmpty()) currMin = Long.valueOf(x);
         if (x < currMin) {
+            // x = 2*curr_min - prev_min
             stack.add(Long.valueOf(x - currMin + x));
             this.currMin = Long.valueOf(x);
         } else {
@@ -30,6 +31,7 @@ class MinStackList {
     public void pop() {
         Long top = stack.remove(stack.size() - 1);
         if (top < currMin) {
+            // prev_min = 2*curr_min - x
             currMin = 2 * currMin - top;
         }
     }
@@ -42,5 +44,12 @@ class MinStackList {
 
     public int getMin() {
         return this.currMin.intValue();
+    }
+
+    public static void main(String[] args) {
+        MinStack ms = new MinStack();
+        ms.push(10);
+        ms.push(5);
+
     }
 }
