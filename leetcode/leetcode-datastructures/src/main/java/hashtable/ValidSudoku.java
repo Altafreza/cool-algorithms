@@ -38,11 +38,11 @@ public class ValidSudoku {
 
         for (int j = 0; j < 16; j++) {
             int a = j / 4, b = j % 4;
-            if(j % 4 == 0) System.out.println();
+            if (j % 4 == 0) System.out.println();
             System.out.print(grid[a][b] + " ");
         }
 
-        }
+    }
     //}
 
 }
