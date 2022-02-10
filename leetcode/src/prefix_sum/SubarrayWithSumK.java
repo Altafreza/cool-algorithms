@@ -1,35 +1,12 @@
 package prefix_sum;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class SubarrayWithSumK {
-    public int subarraySum1(int[] nums, int k) {
-        int n = nums.length;
-        int count = 0;
-        int i = 0, j = 0;
-        int sum = 0;
-        while (i < n) {
-            if (sum < k) {
-                sum += nums[i];
-                i++;
-            }
-            while (sum > k) { // start removing from the front
-                sum -= nums[j];
-                j++;
-            }
-            if (sum == k) {
-                for (int p = j; p < i; p++) {
-                    count++;
-                }
-                return count;
-            }
-        }
 
-        return count;
-    }
-
-    public int subarraySum(int[] nums, int k) {
+    public static int subarraySum(int[] nums, int k) {
         int sum = 0, result = 0;
         Map<Integer, Integer> preSum = new HashMap<>();
         preSum.put(0, 1); // memo initialize
@@ -45,5 +22,9 @@ public class SubarrayWithSumK {
         }
 
         return result;
+    }
+
+    public static void main(String[] args) {
+        subarraySum(new int[]{-1, -1, 1}, 0);
     }
 }
